@@ -22,7 +22,7 @@ export default function HeroSection({ onOpenBooking }) {
           poster="/Hero_section1.png"
           className="w-full h-full object-cover object-center"
         >
-          <source src="/Hero_section_video2.mp4" type="video/mp4" />
+          <source src="/Herosection%20video.mp4" type="video/mp4" />
           <img
             src="/Hero_section1.png"
             alt="NautiGoa Luxury Yacht Experience"

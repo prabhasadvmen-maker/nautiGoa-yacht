@@ -41,8 +41,8 @@ export default function Navbar({ onOpenBooking }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-xl py-3 shadow-lg border-b border-neutral-200/80 text-neutral-900'
-          : 'bg-white/90 backdrop-blur-md py-4 sm:py-5 border-b border-neutral-200/40 text-neutral-900'
+          ? 'bg-black/90 backdrop-blur-xl py-3 shadow-2xl border-b border-white/10 text-white'
+          : 'bg-transparent py-4 sm:py-5 text-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,11 +58,11 @@ export default function Navbar({ onOpenBooking }) {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-sans tracking-tight text-black leading-none">
-                <span className="font-light text-black">Nauti</span>
-                <span className="font-black text-black">GOA</span>
+              <span className="text-xl sm:text-2xl font-sans tracking-tight text-white leading-none">
+                <span className="font-light text-white">Nauti</span>
+                <span className="font-black text-[#C8A96B]">GOA</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-neutral-600 font-sans uppercase font-bold mt-1">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-neutral-300 font-sans uppercase font-bold mt-1">
                 Luxury Yachts
               </span>
             </div>
@@ -77,7 +77,7 @@ export default function Navbar({ onOpenBooking }) {
                 className={`text-xs uppercase tracking-[0.2em] transition-colors duration-200 font-semibold py-1 relative ${
                   isActive(link.path)
                     ? 'text-[#C8A96B] font-bold'
-                    : 'text-neutral-800 hover:text-[#C8A96B]'
+                    : 'text-white hover:text-[#C8A96B]'
                 }`}
               >
                 {link.name}
@@ -92,7 +92,7 @@ export default function Navbar({ onOpenBooking }) {
           <div className="hidden md:flex items-center gap-5">
             <a
               href="tel:+918818899951"
-              className="flex items-center gap-2 text-xs uppercase tracking-wider text-neutral-800 hover:text-[#C8A96B] transition-colors px-2 py-1 font-medium"
+              className="flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C8A96B] transition-colors px-2 py-1 font-medium"
             >
               <Phone className="w-3.5 h-3.5 text-[#C8A96B]" />
               <span>+91 88188 99951</span>
@@ -107,17 +107,17 @@ export default function Navbar({ onOpenBooking }) {
             </button>
           </div>
 
-          {/* Mobile Navigation Button (Hamburger Menu - Set icon to Black) */}
+          {/* Mobile Navigation Button */}
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-black hover:text-[#C8A96B] focus:outline-none rounded-xs min-h-[40px] min-w-[40px] flex items-center justify-center"
+              className="p-2 text-white hover:text-[#C8A96B] focus:outline-none rounded-xs min-h-[40px] min-w-[40px] flex items-center justify-center"
               aria-label="Toggle Navigation Menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-black" />
+                <X className="w-6 h-6 text-[#C8A96B]" />
               ) : (
-                <Menu className="w-6 h-6 text-black stroke-[2.5]" />
+                <Menu className="w-6 h-6 text-white stroke-[2.5]" />
               )}
             </button>
           </div>
