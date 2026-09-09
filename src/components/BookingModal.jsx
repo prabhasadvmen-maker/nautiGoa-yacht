@@ -34,10 +34,10 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
   };
 
   const handleWhatsAppSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     const yachtObj = YACHTS_DATA.find(y => y.id === formData.yachtId) || YACHTS_DATA[0];
     
-    const textMessage = `*NAUTIGOA YACHT CHARTER ENQUIRY*%0A%0A` +
+    const textMessage = `*NAUTIGOA LUXURY YACHT CHARTER BOOKING*%0A%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
       `*Email:* ${formData.email || 'N/A'}%0A` +
@@ -46,15 +46,10 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
       `*Charter Date:* ${formData.date || 'To be decided'}%0A` +
       `*Guests:* ${formData.guests}%0A` +
       `*Occasion:* ${formData.occasion}%0A` +
-      `*Message:* ${formData.message || 'None'}`;
+      `*Special Requests:* ${formData.message || 'None'}`;
 
     const waUrl = `https://wa.me/918818899951?text=${textMessage}`;
     window.open(waUrl, '_blank');
-    setIsSubmitted(true);
-  };
-
-  const handleDirectSubmit = (e) => {
-    e.preventDefault();
     setIsSubmitted(true);
   };
 
@@ -259,17 +254,10 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-xs hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                  className="w-full py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-widest rounded-xs transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>Submit via WhatsApp (+91 88188 99951)</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={handleDirectSubmit}
-                  className="py-3 px-6 bg-transparent border border-white/20 text-neutral-200 hover:text-white hover:border-[#C8A96B] text-xs uppercase tracking-widest rounded-xs transition-colors cursor-pointer"
-                >
-                  Send Enquiry
+                  <span>Book Now via WhatsApp (+91 88188 99951)</span>
                 </button>
               </div>
 

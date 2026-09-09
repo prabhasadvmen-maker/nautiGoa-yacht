@@ -107,17 +107,17 @@ export default function Navbar({ onOpenBooking }) {
             </button>
           </div>
 
-          {/* Mobile Navigation Button - Matching Reference Hamburger Icon */}
+          {/* Mobile Navigation Button (Hamburger Menu - Set icon to Black) */}
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-neutral-200 hover:text-white focus:outline-none rounded-xs min-h-[40px] min-w-[40px] flex items-center justify-center"
+              className="p-2 text-black hover:text-[#C8A96B] focus:outline-none rounded-xs min-h-[40px] min-w-[40px] flex items-center justify-center"
               aria-label="Toggle Navigation Menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-[#C8A96B]" />
+                <X className="w-6 h-6 text-black" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-6 h-6 text-black stroke-[2.5]" />
               )}
             </button>
           </div>

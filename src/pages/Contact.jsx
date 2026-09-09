@@ -49,24 +49,19 @@ export default function Contact({ onOpenBooking }) {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  const handleWhatsAppSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     const yachtObj = YACHTS_DATA.find(y => y.id === formData.yachtId) || YACHTS_DATA[0];
     
-    const msg = `*NEW BOOKING REQUEST - NAUTIGOA*%0A%0A` +
+    const msg = `*NAUTIGOA LUXURY YACHT CHARTER BOOKING*%0A%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
       `*Email:* ${formData.email || 'N/A'}%0A` +
       `*Location:* ${formData.location}%0A` +
       `*Yacht:* ${yachtObj.name}%0A` +
-      `*Date:* ${formData.date || 'TBD'}%0A` +
+      `*Charter Date:* ${formData.date || 'TBD'}%0A` +
       `*Guests:* ${formData.guests}%0A` +
       `*Occasion:* ${formData.occasion}%0A` +
-      `*Details:* ${formData.message || 'None'}`;
+      `*Special Requests:* ${formData.message || 'None'}`;
 
     window.open(`https://wa.me/918818899951?text=${msg}`, '_blank');
     setSubmitted(true);
@@ -222,7 +217,7 @@ export default function Contact({ onOpenBooking }) {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleWhatsAppSubmit} className="space-y-4">
+                <form onSubmit={handleFormSubmit} className="space-y-4">
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -375,18 +370,10 @@ export default function Contact({ onOpenBooking }) {
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 py-4 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-xs hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-xl"
-                    >
-                      REQUEST BOOKING
-                    </button>
-                    
-                    <button
-                      type="button"
-                      onClick={handleWhatsAppSubmit}
-                      className="py-4 px-6 bg-[#25D366] text-white font-bold text-xs uppercase tracking-[0.15em] rounded-xs hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-xs transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xl"
                     >
                       <MessageCircle className="w-4 h-4 fill-current" />
-                      <span>WhatsApp Now</span>
+                      <span>Book Now via WhatsApp (+91 88188 99951)</span>
                     </button>
                   </div>
 

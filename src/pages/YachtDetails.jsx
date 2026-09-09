@@ -43,17 +43,20 @@ export default function YachtDetails({ onOpenBooking }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    handleWhatsAppClick();
     setSubmitted(true);
   };
 
   const handleWhatsAppClick = () => {
-    const msg = `*BOOKING INQUIRY FOR ${yacht.name.toUpperCase()}*%0A%0A` +
+    const msg = `*NAUTIGOA LUXURY YACHT CHARTER BOOKING*%0A%0A` +
+      `*Selected Yacht:* ${yacht.name.toUpperCase()}%0A` +
+      `*Location:* ${yacht.location}%0A` +
       `*Name:* ${formData.name || 'Not provided'}%0A` +
       `*Phone:* ${formData.phone || 'Not provided'}%0A` +
-      `*Location:* ${yacht.location}%0A` +
-      `*Date:* ${formData.date || 'TBD'}%0A` +
+      `*Email:* ${formData.email || 'N/A'}%0A` +
+      `*Charter Date:* ${formData.date || 'TBD'}%0A` +
       `*Guests:* ${formData.guests}%0A` +
-      `*Message:* ${formData.message || 'I would like to check availability for this yacht.'}`;
+      `*Special Requests:* ${formData.message || 'I would like to check availability for this yacht.'}`;
 
     window.open(`https://wa.me/918818899951?text=${msg}`, '_blank');
   };
@@ -323,19 +326,11 @@ export default function YachtDetails({ onOpenBooking }) {
 
                   <div className="space-y-3 pt-2">
                     <button
-                      type="button"
-                      onClick={handleWhatsAppClick}
+                      type="submit"
                       className="w-full py-3.5 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-xs hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
                     >
                       <MessageCircle className="w-4 h-4 fill-current" />
-                      <span>Book Instantly on WhatsApp</span>
-                    </button>
-
-                    <button
-                      type="submit"
-                      className="w-full py-3 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-widest rounded-xs hover:bg-[#D8B97B] transition-colors cursor-pointer"
-                    >
-                      Submit Enquiry Form
+                      <span>Book Now via WhatsApp (+91 88188 99951)</span>
                     </button>
                   </div>
                 </form>
