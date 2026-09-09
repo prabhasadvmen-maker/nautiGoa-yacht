@@ -1,0 +1,422 @@
+import { useState, useEffect } from 'react';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  MessageCircle, 
+  Send, 
+  CheckCircle2, 
+  Clock, 
+  ShieldCheck
+} from 'lucide-react';
+
+const InstagramIcon = (props) => (
+  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+const FacebookIcon = (props) => (
+  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
+import { YACHTS_DATA } from '../data/yachtsData';
+
+export default function Contact({ onOpenBooking }) {
+  useEffect(() => {
+    document.title = "Book a Luxury Yacht | NautiGoa";
+  }, []);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    location: 'Goa',
+    yachtId: YACHTS_DATA[0].id,
+    date: '',
+    guests: '2 Guests',
+    occasion: 'Sunset Cruise',
+    message: ''
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault();
+    const yachtObj = YACHTS_DATA.find(y => y.id === formData.yachtId) || YACHTS_DATA[0];
+    
+    const msg = `*NEW BOOKING REQUEST - NAUTIGOA*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Phone:* ${formData.phone}%0A` +
+      `*Email:* ${formData.email || 'N/A'}%0A` +
+      `*Location:* ${formData.location}%0A` +
+      `*Yacht:* ${yachtObj.name}%0A` +
+      `*Date:* ${formData.date || 'TBD'}%0A` +
+      `*Guests:* ${formData.guests}%0A` +
+      `*Occasion:* ${formData.occasion}%0A` +
+      `*Details:* ${formData.message || 'None'}`;
+
+    window.open(`https://wa.me/918818899951?text=${msg}`, '_blank');
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#050505] text-neutral-100 pt-28 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        {/* Header Hero */}
+        <div className="text-center max-w-3xl mx-auto space-y-4 pt-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black border border-[#C8A96B]/40 text-[#C8A96B] text-xs font-semibold uppercase tracking-widest">
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>24/7 Charter Desk</span>
+          </div>
+
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide leading-tight">
+            LET'S PLAN YOUR PERFECT YACHT EXPERIENCE
+          </h1>
+
+          <p className="text-neutral-300 text-sm sm:text-base font-light">
+            Fill out the form below or chat directly on WhatsApp to check live boat availability in Goa, Mumbai, and Dubai.
+          </p>
+        </div>
+
+        {/* Contact Info & Booking Form Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          {/* Contact Details Column */}
+          <div className="lg:col-span-5 space-y-8">
+            
+            <div className="space-y-4">
+              <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
+                Direct Contacts
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                REACH NAUTIGOA DESK
+              </h2>
+              <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed">
+                Our reservations team is available 24/7 to customize your itinerary, arrange food & drinks, and coordinate captain briefings.
+              </p>
+            </div>
+
+            {/* Contact Cards */}
+            <div className="space-y-4">
+              
+              <a
+                href="tel:+918818899951"
+                className="p-5 bg-[#121212] border border-white/10 hover:border-[#C8A96B]/60 rounded-xs flex items-center gap-4 transition-all block"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Call Reservations</span>
+                  <span className="font-serif text-lg font-bold text-white">+91 88188 99951</span>
+                </div>
+              </a>
+
+              <a
+                href="https://wa.me/918818899951"
+                target="_blank"
+                rel="noreferrer"
+                className="p-5 bg-[#121212] border border-white/10 hover:border-[#25D366]/60 rounded-xs flex items-center gap-4 transition-all block"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#25D366]/20 border border-[#25D366]/50 flex items-center justify-center text-[#25D366]">
+                  <MessageCircle className="w-5 h-5 fill-current" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">WhatsApp Direct</span>
+                  <span className="font-serif text-lg font-bold text-white">+91 88188 99951</span>
+                </div>
+              </a>
+
+              <a
+                href="mailto:booking@nautigoayachts.com"
+                className="p-5 bg-[#121212] border border-white/10 hover:border-[#C8A96B]/60 rounded-xs flex items-center gap-4 transition-all block"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Official Email</span>
+                  <span className="font-serif text-base font-bold text-white">booking@nautigoayachts.com</span>
+                </div>
+              </a>
+
+              <div className="p-5 bg-[#121212] border border-white/10 rounded-xs flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Goa Office Base</span>
+                  <p className="text-xs text-white font-medium leading-relaxed mt-1">
+                    NautiGoa Yacht Service, 548, Next to Britona Church, Panjim, Goa - 403001, India
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Social Channels */}
+            <div className="pt-4 border-t border-white/10 space-y-3">
+              <span className="text-xs uppercase text-neutral-400 tracking-wider block font-semibold">Follow Official Channels</span>
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://www.instagram.com/nautigoa"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2 bg-neutral-900 border border-white/15 hover:border-[#C8A96B] text-white text-xs rounded-xs flex items-center gap-2"
+                >
+                  <InstagramIcon className="w-4 h-4 text-[#C8A96B]" />
+                  <span>Instagram (@nautigoa)</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/NautiGoaYachts/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2 bg-neutral-900 border border-white/15 hover:border-[#C8A96B] text-white text-xs rounded-xs flex items-center gap-2"
+                >
+                  <FacebookIcon className="w-4 h-4 text-[#C8A96B]" />
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Booking Form Column */}
+          <div className="lg:col-span-7">
+            <div className="glass-panel border border-[#C8A96B]/40 rounded-sm p-8 space-y-6 shadow-2xl">
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-white uppercase">
+                  BOOKING REQUEST FORM
+                </h3>
+                <p className="text-xs text-[#C8A96B] uppercase tracking-wider font-medium mt-1">
+                  Complete your details for instant slot check
+                </p>
+              </div>
+
+              {submitted ? (
+                <div className="py-12 text-center space-y-4 bg-black/60 p-8 rounded-xs border border-white/10">
+                  <CheckCircle2 className="w-14 h-14 text-[#C8A96B] mx-auto animate-bounce" />
+                  <h4 className="font-serif text-2xl font-bold text-white">Request Received!</h4>
+                  <p className="text-sm text-neutral-300 max-w-md mx-auto">
+                    We have received your yacht charter request. Our reservation officer will contact you immediately.
+                  </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-4 px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-widest rounded-xs"
+                  >
+                    Send Another Request
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleWhatsAppSubmit} className="space-y-4">
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Your full name"
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Phone / WhatsApp *
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+91 88188 99951"
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="email@example.com"
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Preferred Location *
+                      </label>
+                      <select
+                        name="location"
+                        value={formData.location}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      >
+                        <option value="Goa">Goa (Panjim Base)</option>
+                        <option value="Mumbai">Mumbai (Gateway)</option>
+                        <option value="Dubai">Dubai (Dubai Marina)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Preferred Yacht
+                      </label>
+                      <select
+                        name="yachtId"
+                        value={formData.yachtId}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      >
+                        {YACHTS_DATA.map(y => (
+                          <option key={y.id} value={y.id}>
+                            {y.name} ({y.location})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Charter Date
+                      </label>
+                      <input
+                        type="date"
+                        name="date"
+                        value={formData.date}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Guests Count
+                      </label>
+                      <select
+                        name="guests"
+                        value={formData.guests}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      >
+                        <option value="Couple (2 Guests)">Couple (2 Guests)</option>
+                        <option value="3-6 Guests">3-6 Guests</option>
+                        <option value="7-12 Guests">7-12 Guests</option>
+                        <option value="13-25 Guests">13-25 Guests</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                        Occasion
+                      </label>
+                      <select
+                        name="occasion"
+                        value={formData.occasion}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      >
+                        <option value="Sunset Cruise">Sunset Cruise</option>
+                        <option value="Proposal / Romantic Date">Proposal / Romantic Date</option>
+                        <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
+                        <option value="Birthday Party">Birthday Party</option>
+                        <option value="Corporate Hosting">Corporate Hosting</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      Message / Special Requests
+                    </label>
+                    <textarea
+                      name="message"
+                      rows={3}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your celebration, food/drink choices, decor requirements..."
+                      className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    />
+                  </div>
+
+                  <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                    <button
+                      type="submit"
+                      className="flex-1 py-4 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-xs hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-xl"
+                    >
+                      REQUEST BOOKING
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={handleWhatsAppSubmit}
+                      className="py-4 px-6 bg-[#25D366] text-white font-bold text-xs uppercase tracking-[0.15em] rounded-xs hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <MessageCircle className="w-4 h-4 fill-current" />
+                      <span>WhatsApp Now</span>
+                    </button>
+                  </div>
+
+                </form>
+              )}
+            </div>
+          </div>
+
+        </div>
+
+        {/* Interactive Google Map Section */}
+        <div className="space-y-4 pt-6">
+          <div className="flex items-center justify-between">
+            <h3 className="font-serif text-2xl font-bold text-white uppercase">GOA BASE LOCATION</h3>
+            <span className="text-xs text-[#C8A96B] uppercase font-semibold">Panjim, Next to Britona Church</span>
+          </div>
+
+          <div className="w-full h-96 sm:h-[450px] rounded-sm overflow-hidden border border-[#C8A96B]/40 shadow-2xl relative bg-[#121212]">
+            <iframe
+              title="NautiGoa Yacht Base Location Map"
+              src="https://maps.google.com/maps?q=Britona%20Church%20Panjim%20Goa&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full border-0 filter grayscale contrast-125 invert-[0.9] opacity-90 hover:opacity-100 transition-opacity duration-300"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
