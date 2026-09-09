@@ -127,10 +127,10 @@ export const YACHTS_DATA = [
     startingPrice: "₹55,000",
     priceUnit: "per hour",
     featured: true,
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
     gallery: [
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop"
     ],
     shortDesc: "Mumbai's premiere luxury superyacht. Offers a grand multi-level deck experience with views of Gateway of India and Arabian Sea.",
     description: "Sail from Gateway of India, Mumbai aboard the magnificent Sunseeker 76. Designed to impress, this flagship yacht combines dramatic exterior lines with sophisticated modern interiors. Enjoy panoramic views of the ocean skyline, fine dining on water, and unmatched privacy for high-profile clients and royal celebrations.",
@@ -239,7 +239,7 @@ export const DESTINATIONS_DATA = [
     name: "Dubai",
     tagline: "Dubai Marina Waters, Burj Al Arab Sunset & Palm Jumeirah",
     charterCount: "30+ Mega Yachts Available",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop",
     description: "Sail amidst world-famous maritime destinations. Enjoy superyacht charters around Dubai Marina lagoon, Ain Dubai, Burj Al Arab waters, and Atlantis Palm.",
     popularRoutes: ["Dubai Marina Lagoon", "Burj Al Arab Sunset", "Palm Jumeirah Circle", "Dubai Canal Cruise"]
   }
