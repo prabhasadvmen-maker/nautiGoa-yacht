@@ -33,8 +33,8 @@ export default function Home({ onOpenBooking }) {
   return (
     <div className="min-h-screen bg-[#050505] text-neutral-100 selection:bg-[#C8A96B] selection:text-black overflow-x-hidden">
       
-      {/* 1. HERO SECTION - FULLY RESPONSIVE 320px-768px */}
-      <section className="relative w-full h-screen min-h-[640px] max-h-[900px] flex items-center overflow-hidden">
+      {/* 1. HERO SECTION - BALANCED PROPORTIONS ON ALL SCREENS */}
+      <section className="relative w-full min-h-0 sm:min-h-[720px] flex items-center overflow-hidden">
         
         {/* Full-screen Yacht Background */}
         <div className="absolute inset-0 z-0">
@@ -43,41 +43,41 @@ export default function Home({ onOpenBooking }) {
             alt="NautiGoa Luxury Yacht"
             className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
           />
-          {/* Dark elegant overlay gradient angled for left-side text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/35 sm:to-black/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/70"></div>
+          {/* Dark elegant overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40 sm:to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/80"></div>
           {/* Left-side subtle gold glow */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,_rgba(200,169,107,0.15)_0%,_transparent_55%)] pointer-events-none"></div>
         </div>
 
-        {/* Hero Content Wrapper - Left Aligned */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-14 sm:pt-16">
-          <div className="max-w-3xl text-left space-y-4 sm:space-y-6">
+        {/* Hero Content Wrapper - Clean Clearance below Header */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 sm:pt-28 lg:pt-32 pb-10 sm:pb-16">
+          <div className="max-w-2xl text-left space-y-3 sm:space-y-5">
             
             {/* Location Tagline Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-black/80 border border-[#C8A96B]/50 backdrop-blur-md shadow-2xl">
-              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C8A96B]" />
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C8A96B] font-semibold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/80 border border-[#C8A96B]/50 backdrop-blur-md shadow-xl">
+              <Sparkles className="w-3 h-3 text-[#C8A96B]" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#C8A96B] font-semibold">
                 Goa • Mumbai • Dubai
               </span>
             </div>
 
-            {/* Main Title Heading - Scaled for 320px-768px screens */}
-            <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white uppercase leading-[1.08] sm:leading-[1.04]">
+            {/* Main Title Heading - Proportional & Clean */}
+            <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-white uppercase leading-tight">
               EXPERIENCE LUXURY <br />
               <span className="gold-gradient-text drop-shadow-2xl">ON WATER</span>
             </h1>
 
             {/* Subheading Description */}
-            <p className="text-neutral-300 text-xs sm:text-base md:text-lg font-light tracking-wide leading-relaxed max-w-2xl">
+            <p className="text-neutral-300 text-xs sm:text-sm md:text-base font-light tracking-wide leading-relaxed max-w-xl">
               Premium Yacht Experiences in Goa, Mumbai & Dubai. Curated private charters, romantic candlelight cruises, and drone photography.
             </p>
 
-            {/* Action CTAs - Full Width on Mobile */}
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4">
+            {/* Action CTAs */}
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2.5 sm:gap-4">
               <Link
                 to="/yachts"
-                className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-[#C8A96B] text-black font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-xs hover:bg-[#D8B97B] transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3 sm:py-4 bg-[#C8A96B] text-black font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-xs hover:bg-[#D8B97B] transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
               >
                 <span>Explore Yachts</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -85,14 +85,14 @@ export default function Home({ onOpenBooking }) {
 
               <button
                 onClick={() => onOpenBooking()}
-                className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-black/60 border border-white/30 hover:border-[#C8A96B] text-white text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold rounded-xs backdrop-blur-md transition-all duration-300 hover:bg-white/10 cursor-pointer flex items-center justify-center"
+                className="w-full sm:w-auto px-8 py-3 sm:py-4 bg-black/60 border border-white/30 hover:border-[#C8A96B] text-white text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold rounded-xs backdrop-blur-md transition-all duration-300 hover:bg-white/10 cursor-pointer flex items-center justify-center"
               >
                 Book Your Yacht
               </button>
             </div>
 
             {/* Verified Trust Badges */}
-            <div className="pt-3 sm:pt-6 flex flex-wrap items-center justify-start gap-3 sm:gap-6 text-[11px] sm:text-xs text-neutral-400 font-medium">
+            <div className="pt-2 sm:pt-4 flex flex-wrap items-center justify-start gap-3 sm:gap-6 text-[10px] sm:text-xs text-neutral-400 font-medium">
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#C8A96B]" />
                 <span>Direct Verified Charter</span>
@@ -107,9 +107,9 @@ export default function Home({ onOpenBooking }) {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-12 z-10 flex flex-col items-start gap-1 text-neutral-400 animate-bounce">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em]">Scroll Down</span>
+        {/* Scroll Indicator - Desktop Only */}
+        <div className="hidden sm:flex absolute bottom-6 left-12 z-10 flex-col items-start gap-1 text-neutral-400 animate-bounce">
+          <span className="text-[10px] uppercase tracking-[0.25em]">Scroll Down</span>
           <ChevronDown className="w-3.5 h-3.5 text-[#C8A96B]" />
         </div>
       </section>
