@@ -12,7 +12,7 @@ export default function HeroSection({ onOpenBooking }) {
   return (
     <section className="relative w-full min-h-[100dvh] sm:min-h-[820px] flex flex-col justify-between overflow-hidden bg-black selection:bg-[#C8A96B] selection:text-black">
       
-      {/* Background Video - Clean full-brightness video without dark overlays */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
@@ -29,6 +29,8 @@ export default function HeroSection({ onOpenBooking }) {
             className="w-full h-full object-cover object-center"
           />
         </video>
+        {/* Vignette gradient overlay for 100% sharp text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/80 pointer-events-none"></div>
       </div>
 
       {/* Main Hero Content - Matching Reference Layout */}
@@ -37,22 +39,22 @@ export default function HeroSection({ onOpenBooking }) {
           
           {/* Top Location / Tagline */}
           <div className="flex items-center gap-3">
-            <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-[#C8A96B]">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.35em] text-[#C8A96B] drop-shadow-md">
               GOA • MUMBAI • DUBAI
             </span>
           </div>
 
-          {/* Main Typography Header - Clean, smooth text without black shadow halos */}
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-bold tracking-normal leading-[1.06]">
-            <span className="block text-white uppercase">EXPERIENCE</span>
-            <span className="block text-[#C8A96B] uppercase">
+          {/* Main Typography Header */}
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-bold tracking-normal leading-[1.06] drop-shadow-lg">
+            <span className="block text-white uppercase drop-shadow-md">EXPERIENCE</span>
+            <span className="block text-[#C8A96B] uppercase drop-shadow-md">
               LUXURY
             </span>
-            <span className="block text-white uppercase">ON WATER</span>
+            <span className="block text-white uppercase drop-shadow-md">ON WATER</span>
           </h1>
 
           {/* Subtext description */}
-          <p className="text-neutral-100 text-sm sm:text-base font-light tracking-wide leading-relaxed max-w-lg">
+          <p className="text-neutral-100 text-sm sm:text-base font-medium tracking-wide leading-relaxed max-w-lg drop-shadow-md">
             Premium Yacht Experiences for Unforgettable Moments
           </p>
 

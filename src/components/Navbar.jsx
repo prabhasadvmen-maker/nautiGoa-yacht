@@ -58,11 +58,11 @@ export default function Navbar({ onOpenBooking }) {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-sans tracking-tight text-white leading-none">
+              <span className="text-xl sm:text-2xl font-sans tracking-tight text-white leading-none drop-shadow-md">
                 <span className="font-light text-white">Nauti</span>
                 <span className="font-black text-[#C8A96B]">GOA</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-neutral-300 font-sans uppercase font-bold mt-1">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-white/90 font-sans uppercase font-bold mt-1 drop-shadow-sm">
                 Luxury Yachts
               </span>
             </div>
@@ -74,15 +74,15 @@ export default function Navbar({ onOpenBooking }) {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-xs uppercase tracking-[0.2em] transition-colors duration-200 font-semibold py-1 relative ${
+                className={`text-xs uppercase tracking-[0.2em] transition-colors duration-200 font-bold py-1 relative drop-shadow-md ${
                   isActive(link.path)
-                    ? 'text-[#C8A96B] font-bold'
+                    ? 'text-[#C8A96B]'
                     : 'text-white hover:text-[#C8A96B]'
                 }`}
               >
                 {link.name}
                 {isActive(link.path) && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A96B] rounded-full"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A96B] rounded-full shadow-[0_0_8px_#C8A96B]"></span>
                 )}
               </Link>
             ))}
@@ -92,7 +92,7 @@ export default function Navbar({ onOpenBooking }) {
           <div className="hidden md:flex items-center gap-5">
             <a
               href="tel:+918818899951"
-              className="flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C8A96B] transition-colors px-2 py-1 font-medium"
+              className="flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C8A96B] transition-colors px-2 py-1 font-semibold drop-shadow-md"
             >
               <Phone className="w-3.5 h-3.5 text-[#C8A96B]" />
               <span>+91 88188 99951</span>
@@ -100,7 +100,7 @@ export default function Navbar({ onOpenBooking }) {
 
             <button
               onClick={() => onOpenBooking()}
-              className="px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-[#D8B97B] transition-all duration-200 shadow-md hover:shadow-[#C8A96B]/30 active:scale-95 flex items-center gap-2 cursor-pointer"
+              className="px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-[#D8B97B] transition-all duration-200 shadow-xl hover:shadow-[#C8A96B]/40 active:scale-95 flex items-center gap-2 cursor-pointer"
             >
               <Anchor className="w-3.5 h-3.5" />
               <span>Book Now</span>
