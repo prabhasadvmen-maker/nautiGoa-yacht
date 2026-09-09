@@ -42,7 +42,7 @@ export default function Navbar({ onOpenBooking }) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'glass-nav py-3 shadow-2xl border-b border-white/10'
-          : 'bg-gradient-to-b from-black/95 via-black/70 to-transparent py-4 sm:py-5'
+          : 'bg-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,15 +73,15 @@ export default function Navbar({ onOpenBooking }) {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-xs uppercase tracking-[0.2em] transition-all duration-200 font-medium py-1 relative ${
+                className={`text-xs uppercase tracking-[0.2em] transition-colors duration-200 font-semibold py-1 relative ${
                   isActive(link.path)
                     ? 'text-[#C8A96B] font-bold'
-                    : 'text-neutral-300 hover:text-white'
+                    : 'text-[#F7F7F5] hover:text-[#C8A96B]'
                 }`}
               >
                 {link.name}
                 {isActive(link.path) && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A96B] rounded-full shadow-[0_0_8px_#C8A96B]"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A96B] rounded-full"></span>
                 )}
               </Link>
             ))}

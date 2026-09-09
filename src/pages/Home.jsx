@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -11,21 +11,35 @@ import {
   Waves,
   Gem,
   Users,
-  Play
+  Play,
+  RotateCcw
 } from 'lucide-react';
 import { YACHTS_DATA, DESTINATIONS_DATA, EXPERIENCES_DATA, TESTIMONIALS_DATA, REASON_FEATURES } from '../data/yachtsData';
+import HeroSection from '../components/HeroSection';
 import YachtCard from '../components/YachtCard';
 import DestinationCard from '../components/DestinationCard';
 
 export default function Home({ onOpenBooking }) {
+  const [isPlayingInline, setIsPlayingInline] = useState(false);
+  const inlineVideoRef = useRef(null);
+
   useEffect(() => {
     document.title = "NautiGoa | Luxury Yacht Rentals in Goa, Mumbai & Dubai";
   }, []);
 
+  const handlePlayInline = () => {
+    if (inlineVideoRef.current) {
+      inlineVideoRef.current.muted = false;
+      inlineVideoRef.current.controls = true;
+      inlineVideoRef.current.play();
+      setIsPlayingInline(true);
+    }
+  };
+
   const featuredYachts = YACHTS_DATA.slice(0, 4);
 
   const galleryImages = [
-    { url: "/images/hero_yacht.png", title: "Luxury Azimut Flybridge", loc: "Goa" },
+    { url: "/Hero_section1.png", title: "Luxury Azimut Flybridge", loc: "Goa" },
     { url: "/images/catamaran.png", title: "Lagoon Dual-Hull Catamaran", loc: "Mandovi River" },
     { url: "/images/romantic_decor.png", title: "Romantic Candlelight Dinner", loc: "Panjim Sunset" },
     { url: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=800&auto=format&fit=crop", title: "Princess 62 Superyacht", loc: "Dubai Marina" },
@@ -36,74 +50,10 @@ export default function Home({ onOpenBooking }) {
   return (
     <div className="min-h-screen bg-[#050505] text-neutral-100 selection:bg-[#C8A96B] selection:text-black overflow-x-hidden">
       
-      {/* 1. HERO SECTION - MATCHING REFERENCE DESIGN */}
-      <section className="relative w-full min-h-[92dvh] sm:min-h-[720px] flex flex-col justify-center overflow-hidden">
-        
-        {/* Full-screen Yacht Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/hero_yacht.png"
-            alt="NautiGoa Luxury Yacht"
-            className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
-          />
-          {/* Dark elegant overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/40 sm:to-black/25"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80"></div>
-          {/* Ambient gold glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,_rgba(200,169,107,0.18)_0%,_transparent_55%)] pointer-events-none"></div>
-        </div>
+      {/* 1. HERO SECTION */}
+      <HeroSection onOpenBooking={onOpenBooking} />
 
-        {/* Hero Content Wrapper - Matching Reference Layout */}
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-24 sm:pt-32 pb-12">
-          <div className="max-w-xl text-left space-y-4 sm:space-y-6">
-            
-            {/* Location Tracked Tagline - Simple Clean Text from Reference */}
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#C8A96B] font-semibold">
-              GOA • MUMBAI • DUBAI
-            </p>
-
-            {/* Main Title Heading - Clean Serif Typography */}
-            <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-normal text-white leading-[1.12]">
-              EXPERIENCE <br />
-              LUXURY <br />
-              ON WATER
-            </h1>
-
-            {/* Subheading Description */}
-            <p className="text-neutral-300 text-xs sm:text-sm md:text-base font-light tracking-wide leading-relaxed max-w-md">
-              Premium Yacht Experiences in Goa, Mumbai & Dubai.
-            </p>
-
-            {/* Action CTAs - Pill Rounded Buttons from Reference */}
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 max-w-md">
-              <Link
-                to="/yachts"
-                className="w-full sm:w-auto px-8 py-3.5 bg-[#C8A96B] text-black font-semibold text-xs sm:text-sm rounded-full hover:bg-[#D8B97B] transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
-              >
-                <span>Explore Yachts</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              <button
-                onClick={() => onOpenBooking()}
-                className="w-full sm:w-auto px-8 py-3.5 bg-black/50 border border-white/40 hover:border-[#C8A96B] text-white text-xs sm:text-sm font-medium rounded-full backdrop-blur-md transition-all duration-300 hover:bg-white/10 cursor-pointer flex items-center justify-center"
-              >
-                Book Your Yacht
-              </button>
-            </div>
-
-            {/* Bottom Carousel Lines Indicator - From Reference Design */}
-            <div className="pt-4 flex items-center gap-2 opacity-80">
-              <span className="w-10 h-1 bg-white rounded-full"></span>
-              <span className="w-3.5 h-1 bg-white/30 rounded-full"></span>
-              <span className="w-3.5 h-1 bg-white/30 rounded-full"></span>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 2. IT'S A LIFESTYLE SECTION - ELEGANT WHITE CONTAINER FROM REFERENCE DESIGN */}
+      {/* 2. IT'S A LIFESTYLE SECTION */}
       <section className="bg-white text-neutral-900 rounded-t-3xl sm:rounded-t-[40px] px-5 sm:px-8 lg:px-12 py-16 sm:py-24 relative z-20 -mt-6 sm:-mt-8 shadow-2xl">
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           
@@ -120,7 +70,7 @@ export default function Home({ onOpenBooking }) {
             </p>
           </div>
 
-          {/* 3 Icon Feature Grid - From Reference Design */}
+          {/* 3 Icon Feature Grid */}
           <div className="grid grid-cols-3 gap-3 sm:gap-8 border-y border-neutral-200 py-8 text-center">
             
             <div className="space-y-2 flex flex-col items-center">
@@ -152,23 +102,38 @@ export default function Home({ onOpenBooking }) {
 
           </div>
 
-          {/* Video / Story Card - From Reference Design */}
-          <div className="relative aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-neutral-200 shadow-2xl group cursor-pointer" onClick={() => onOpenBooking()}>
-            <img
-              src="/images/hero_yacht.png"
-              alt="NautiGoa Yacht Experience"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+          {/* Video / Story Card - Inline Click to Play without Popup Modal */}
+          <div
+            className="relative aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-neutral-200 shadow-2xl group cursor-pointer bg-black"
+            onClick={!isPlayingInline ? handlePlayInline : undefined}
+          >
+            <video
+              ref={inlineVideoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/Hero_section1.png"
+              className="w-full h-full object-cover"
+            >
+              <source src="/Video.mp4" type="video/mp4" />
+            </video>
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 space-y-3">
-              <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/60 flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-xl">
-                <Play className="w-6 h-6 fill-current translate-x-0.5" />
-              </div>
-              <span className="text-xs sm:text-sm font-serif font-semibold text-white tracking-widest uppercase drop-shadow-md">
-                Watch Our Story
-              </span>
-            </div>
+            {/* Initial Overlay - Hidden once user clicks to play inline */}
+            {!isPlayingInline && (
+              <>
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 space-y-3">
+                  <div className="w-16 h-16 rounded-full bg-[#C8A96B] text-black border border-white/40 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                    <Play className="w-7 h-7 fill-current translate-x-0.5" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-serif font-bold text-white tracking-widest uppercase drop-shadow-md bg-black/50 px-4 py-1.5 rounded-full border border-white/20">
+                    Watch Our Story
+                  </span>
+                </div>
+              </>
+            )}
           </div>
 
         </div>
