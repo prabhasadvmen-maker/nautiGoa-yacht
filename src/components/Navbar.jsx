@@ -41,14 +41,14 @@ export default function Navbar({ onOpenBooking }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-nav py-3 shadow-2xl border-b border-white/10'
-          : 'bg-transparent py-4 sm:py-5'
+          ? 'bg-white/95 backdrop-blur-xl py-3 shadow-lg border-b border-neutral-200/80 text-neutral-900'
+          : 'bg-white/90 backdrop-blur-md py-4 sm:py-5 border-b border-neutral-200/40 text-neutral-900'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo - Matching reference design */}
+          {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-3 group shrink-0">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#C8A96B]/60 shadow-lg group-hover:border-[#C8A96B] transition-colors shrink-0 bg-black">
               <img
@@ -58,10 +58,11 @@ export default function Navbar({ onOpenBooking }) {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-base sm:text-xl font-serif tracking-widest text-white font-bold leading-none uppercase">
-                Nauti<span className="text-[#C8A96B]">Goa</span>
+              <span className="text-xl sm:text-2xl font-sans tracking-tight text-black leading-none">
+                <span className="font-light text-black">Nauti</span>
+                <span className="font-black text-black">GOA</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-neutral-400 font-sans uppercase font-semibold mt-1">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-neutral-600 font-sans uppercase font-bold mt-1">
                 Luxury Yachts
               </span>
             </div>
@@ -76,7 +77,7 @@ export default function Navbar({ onOpenBooking }) {
                 className={`text-xs uppercase tracking-[0.2em] transition-colors duration-200 font-semibold py-1 relative ${
                   isActive(link.path)
                     ? 'text-[#C8A96B] font-bold'
-                    : 'text-[#F7F7F5] hover:text-[#C8A96B]'
+                    : 'text-neutral-800 hover:text-[#C8A96B]'
                 }`}
               >
                 {link.name}
@@ -91,7 +92,7 @@ export default function Navbar({ onOpenBooking }) {
           <div className="hidden md:flex items-center gap-5">
             <a
               href="tel:+918818899951"
-              className="flex items-center gap-2 text-xs uppercase tracking-wider text-neutral-300 hover:text-[#C8A96B] transition-colors px-2 py-1"
+              className="flex items-center gap-2 text-xs uppercase tracking-wider text-neutral-800 hover:text-[#C8A96B] transition-colors px-2 py-1 font-medium"
             >
               <Phone className="w-3.5 h-3.5 text-[#C8A96B]" />
               <span>+91 88188 99951</span>
@@ -99,7 +100,7 @@ export default function Navbar({ onOpenBooking }) {
 
             <button
               onClick={() => onOpenBooking()}
-              className="px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-[#D8B97B] transition-all duration-200 shadow-lg hover:shadow-[#C8A96B]/20 active:scale-95 flex items-center gap-2 cursor-pointer"
+              className="px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-[#D8B97B] transition-all duration-200 shadow-md hover:shadow-[#C8A96B]/30 active:scale-95 flex items-center gap-2 cursor-pointer"
             >
               <Anchor className="w-3.5 h-3.5" />
               <span>Book Now</span>

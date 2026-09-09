@@ -34,8 +34,9 @@ export default function Footer({ onOpenBooking }) {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-serif tracking-widest text-white font-bold leading-none uppercase">
-                  Nauti<span className="text-[#C8A96B]">Goa</span>
+                <span className="text-xl font-sans tracking-tight text-white leading-none">
+                  <span className="font-light">Nauti</span>
+                  <span className="font-black text-white">GOA</span>
                 </span>
                 <span className="text-[10px] tracking-[0.25em] text-neutral-400 font-sans uppercase font-semibold mt-1">
                   Luxury Yachts
