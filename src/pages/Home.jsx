@@ -196,57 +196,193 @@ export default function Home({ onOpenBooking }) {
         </div>
       </section>
 
-      {/* 5. LUXURY EXPERIENCES & SERVICES */}
-      <section className="py-24 bg-[#080808] border-t border-white/10">
+      {/* 5. LUXURY EXPERIENCES & SERVICES - Bento Grid Matching Reference Design */}
+      <section className="py-24 bg-[#FAF9F6] text-neutral-900 border-t border-neutral-200 shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
-              Bespoke Services
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.3em] block">
+              EXPERIENCES
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white">
-              PRIVATE YACHT EXPERIENCES
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
+              Moments Worth Remembering
             </h2>
+            <p className="text-neutral-600 text-xs sm:text-sm font-light pt-1">
+              Curated private yacht journeys designed for celebrations, romance, and luxury coastal escapes.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {EXPERIENCES_DATA.map((exp) => (
-              <div
-                key={exp.id}
-                className="group bg-[#121212] border border-white/10 rounded-sm overflow-hidden flex flex-col hover:border-[#C8A96B]/50 transition-all duration-300 shadow-xl"
-              >
-                <div className="relative aspect-[16/11] overflow-hidden bg-black">
-                  <img
-                    src={exp.image}
-                    alt={exp.title}
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-                </div>
-                <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-white group-hover:text-[#C8A96B] transition-colors">
-                      {exp.title}
-                    </h3>
-                    <span className="text-[11px] text-[#C8A96B] uppercase tracking-wider block mb-2 font-medium">
-                      {exp.subtitle}
-                    </span>
-                    <p className="text-xs text-neutral-400 leading-relaxed font-light">
-                      {exp.description}
-                    </p>
-                  </div>
-                  <div className="pt-4">
-                    <button
-                      onClick={() => onOpenBooking()}
-                      className="text-xs uppercase tracking-widest text-[#C8A96B] font-bold hover:underline flex items-center gap-1 cursor-pointer"
-                    >
-                      <span>Inquire Package</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
+          {/* Bento Photo Grid Matching Reference Image */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-5">
+            
+            {/* Top Left: Tall Red/White Yacht Speeding Card */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-4 md:row-span-2 group relative aspect-[4/5] md:aspect-auto min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1000&auto=format&fit=crop"
+                alt="Speedboat & Island Tours"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-95 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
+                  Speed & Island Tours
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                  Thrilling Ocean Rides
+                </h3>
+                <p className="text-xs text-neutral-300 font-light mt-1 line-clamp-2">
+                  High-speed coastal cruises and secret island stopovers in Goa and Dubai.
+                </p>
+                <div className="pt-3">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#C8A96B] uppercase tracking-wider group-hover:underline">
+                    <span>Book Experience</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Top Center Upper: Horizontal Beach Aerial */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-4 group relative aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
+                alt="Golden Hour Sunset Cruise"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-5 flex flex-col justify-end text-white">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-0.5">
+                  Sunset Cruise
+                </span>
+                <h3 className="font-serif text-lg font-bold text-white">
+                  Golden Hour Sunset Cruise
+                </h3>
+                <span className="text-xs text-neutral-300 font-light">
+                  Watch golden ocean horizons with chilled drinks.
+                </span>
+              </div>
+            </div>
+
+            {/* Top Right: Tall Aerial Speedboat Wake */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-4 md:row-span-2 group relative aspect-[4/5] md:aspect-auto min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop"
+                alt="Pre-Wedding & Drone Shoots"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-95 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
+                  Drone Photography
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                  Pre-Wedding & Drone Shoots
+                </h3>
+                <p className="text-xs text-neutral-300 font-light mt-1 line-clamp-2">
+                  Cinematic 4K aerial photography on catamaran sun trampoline decks.
+                </p>
+                <div className="pt-3">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#C8A96B] uppercase tracking-wider group-hover:underline">
+                    <span>Book Experience</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Top Center Lower: Horizontal Green Bay Aerial */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-4 group relative aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000&auto=format&fit=crop"
+                alt="Romantic Couples & Proposals"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-5 flex flex-col justify-end text-white">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-0.5">
+                  Romance & Proposals
+                </span>
+                <h3 className="font-serif text-lg font-bold text-white">
+                  Romantic Candlelight Setup
+                </h3>
+                <span className="text-xs text-neutral-300 font-light">
+                  Custom floral decor, champagne & private deck dining.
+                </span>
+              </div>
+            </div>
+
+            {/* Bottom Row Item 1: Coastal Cliff */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-3 group relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1000&auto=format&fit=crop"
+                alt="Private Island Expeditions"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end text-white">
+                <span className="text-[9px] uppercase font-bold tracking-[0.2em] text-[#C8A96B]">
+                  Island Escapes
+                </span>
+                <h3 className="font-serif text-base font-bold text-white">
+                  Private Island Expeditions
+                </h3>
+              </div>
+            </div>
+
+            {/* Bottom Row Item 2: Hero Yacht Deck */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-3 group relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="/Hero_section1.png"
+                alt="Luxury Azimut Cruising"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end text-white">
+                <span className="text-[9px] uppercase font-bold tracking-[0.2em] text-[#C8A96B]">
+                  VIP Hospitality
+                </span>
+                <h3 className="font-serif text-base font-bold text-white">
+                  Luxury Azimut Cruising
+                </h3>
+              </div>
+            </div>
+
+            {/* Bottom Row Item 3: Wide Coastline Yacht View */}
+            <div
+              onClick={() => onOpenBooking()}
+              className="md:col-span-6 group relative aspect-[16/9] md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1000&auto=format&fit=crop"
+                alt="Yacht Parties & Celebrations"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
+                  Yacht Celebrations
+                </span>
+                <h3 className="font-serif text-xl font-bold text-white">
+                  Yacht Parties & Birthday Celebrations
+                </h3>
+                <p className="text-xs text-neutral-300 font-light mt-0.5">
+                  Onboard DJ sound systems, private chefs & custom balloon decor setups.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>

@@ -79,54 +79,56 @@ export default function HeroSection({ onOpenBooking }) {
             </button>
           </div>
 
-          {/* 3 Key Trust Badges / Pillars Row */}
-          <div className="pt-8 sm:pt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 border-t border-white/10 max-w-2xl">
-            
-            {/* Feature 1 */}
-            <div className="flex items-center gap-3.5 group">
-              <div className="w-10 h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
-                <ShieldCheck className="w-5 h-5" />
+          {/* 3 Key Trust Badges / Pillars Row - Full width 3-column grid on mobile & desktop */}
+          <div className="pt-6 sm:pt-10 border-t border-white/10 w-full max-w-3xl">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6">
+              
+              {/* Feature 1 */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5 group">
+                <div className="w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-[10px] sm:text-sm text-white leading-tight">
+                    Trusted & Safe
+                  </h4>
+                  <p className="text-[9px] sm:text-[11px] text-neutral-300 font-light mt-0.5">
+                    100% Verified Safety
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-xs sm:text-sm text-white leading-tight">
-                  Trusted & Safe
-                </h4>
-                <p className="text-[11px] text-neutral-300 font-light mt-0.5">
-                  Your Safety, Our Priority
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 2 */}
-            <div className="flex items-center gap-3.5 group">
-              <div className="w-10 h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
-                <Gem className="w-5 h-5" />
+              {/* Feature 2 */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5 group">
+                <div className="w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
+                  <Gem className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-[10px] sm:text-sm text-white leading-tight">
+                    Luxury Fleet
+                  </h4>
+                  <p className="text-[9px] sm:text-[11px] text-neutral-300 font-light mt-0.5">
+                    Premium Yachts
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-xs sm:text-sm text-white leading-tight">
-                  Luxury Fleet
-                </h4>
-                <p className="text-[11px] text-neutral-300 font-light mt-0.5">
-                  Premium Yachts
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 3 */}
-            <div className="flex items-center gap-3.5 group">
-              <div className="w-10 h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
-                <Users className="w-5 h-5" />
+              {/* Feature 3 */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5 group">
+                <div className="w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full bg-black/40 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0 group-hover:bg-[#C8A96B] group-hover:text-black transition-all duration-300 shadow-md">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-[10px] sm:text-sm text-white leading-tight">
+                    Best Memories
+                  </h4>
+                  <p className="text-[9px] sm:text-[11px] text-neutral-300 font-light mt-0.5">
+                    For Every Occasion
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-xs sm:text-sm text-white leading-tight">
-                  Memorable Experiences
-                </h4>
-                <p className="text-[11px] text-neutral-300 font-light mt-0.5">
-                  For Every Occasion
-                </p>
-              </div>
-            </div>
 
+            </div>
           </div>
 
         </div>
