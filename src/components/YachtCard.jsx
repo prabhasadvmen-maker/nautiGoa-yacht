@@ -69,10 +69,10 @@ export default function YachtCard({ yacht, onBook }) {
             </Link>
             <button
               onClick={() => onBook(yacht)}
-              className="px-4 py-2 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-wider rounded-full hover:bg-[#D8B97B] transition-colors cursor-pointer flex items-center gap-1 shadow-md"
+              className="px-4.5 py-2 bg-[#E5A83B] hover:bg-[#D8B97B] text-black font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 shadow-md hover:shadow-[#E5A83B]/40 active:scale-95 cursor-pointer flex items-center gap-1.5"
             >
               <span>Book</span>
-              <ArrowRight className="w-3 h-3" />
+              <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
             </button>
           </div>
         </div>

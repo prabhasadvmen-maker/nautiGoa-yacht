@@ -45,20 +45,24 @@ export default function Home({ onOpenBooking }) {
   const featuredYachts = YACHTS_DATA.slice(0, 4);
 
   const galleryImages = [
-    { url: "/new_iamge/Img1.png", title: "Luxury Azimut Flybridge", loc: "Dubai Marina" },
-    { url: "/new_iamge/img2.png", title: "Golden Sunset Cruise", loc: "Panjim Coast" },
-    { url: "/new_iamge/img3.png", title: "Sea Ray Sundancer Speedboat", loc: "Mandovi River" },
-    { url: "/new_iamge/img4.png", title: "VIP Cockpit Deck Lounge", loc: "Goa Waters" },
-    { url: "/new_iamge/img5.png", title: "Princess 62 Superyacht", loc: "Dubai Marina" },
-    { url: "/new_iamge/img6.png", title: "Teak Deck Sunbathing Lounge", loc: "Mumbai Gateway" },
-    { url: "/new_iamge/img7.png", title: "Royal Horizon Cruise", loc: "Mumbai Coast" },
-    { url: "/new_iamge/img8.png", title: "Lagoon Dual-Hull Catamaran", loc: "Mandovi Bay" },
-    { url: "/new_iamge/img9.png", title: "Trampoline Bow Net Lounge", loc: "Goa Waters" },
-    { url: "/new_iamge/img10.png", title: "Yacht Party & DJ Celebration", loc: "Goa Coast" },
-    { url: "/new_iamge/img11.png", title: "Sunseeker 76 Flybridge Deck", loc: "Dubai Waters" },
-    { url: "/new_iamge/img12.jpeg", title: "Pre-Wedding Drone Photography", loc: "Goa Island" },
-    { url: "/new_iamge/img13.jpeg", title: "Romantic Dinner & Sunset Setup", loc: "Panjim Sunset" },
-    { url: "/new_iamge/img14.jpeg", title: "Ferretti Sovereign Ocean Cruise", loc: "Dubai Horizon" }
+    { url: "/new_image2/img1.jpeg", title: "Luxury Azimut 55 Stateroom Lounge", loc: "Dubai Marina" },
+    { url: "/new_image2/img2.jpeg", title: "Golden Hour Ocean Sunset Cruise", loc: "Panjim Coast" },
+    { url: "/new_image2/img3.jpeg", title: "Sea Ray Sundancer Speedboat Ride", loc: "Mandovi River" },
+    { url: "/new_image2/img4.jpeg", title: "VIP Cockpit Deck & Lounge", loc: "Goa Waters" },
+    { url: "/new_image2/img5.jpeg", title: "Princess 62 Flybridge Superyacht", loc: "Dubai Marina" },
+    { url: "/new_image2/img6.jpeg", title: "Teak Deck Sunbathing Lounge", loc: "Mumbai Gateway" },
+    { url: "/new_image2/img7.jpeg", title: "Royal Horizon Sunset Cruise", loc: "Mumbai Coast" },
+    { url: "/new_image2/img8.jpeg", title: "Lagoon Dual-Hull Catamaran Net", loc: "Mandovi Bay" },
+    { url: "/new_image2/img9.jpeg", title: "Trampoline Bow Net Sunbathing", loc: "Goa Waters" },
+    { url: "/new_image2/img10.jpeg", title: "Yacht Party & DJ Celebration", loc: "Goa Coast" },
+    { url: "/new_image2/img11.jpeg", title: "Sunseeker 76 Flybridge Deck", loc: "Dubai Waters" },
+    { url: "/new_image2/img12.jpeg", title: "Pre-Wedding Drone Shoot", loc: "Goa Island" },
+    { url: "/new_image2/img13.jpeg", title: "Romantic Dinner & Floral Setup", loc: "Panjim Sunset" },
+    { url: "/new_image2/img14.jpeg", title: "Ferretti Sovereign Ocean Charter", loc: "Dubai Horizon" },
+    { url: "/new_image2/img15.jpeg", title: "Catamaran Party & Champagne Deck", loc: "Goa Coast" },
+    { url: "/new_image2/img16.jpeg", title: "Luxury Yacht Cabin Interior", loc: "Dubai Waters" },
+    { url: "/new_image2/img17.jpeg", title: "Island Hopping Speedboat Tour", loc: "Mandovi River" },
+    { url: "/new_image2/img18.jpeg", title: "VIP Celebration & Sun Deck", loc: "Mumbai Gateway" }
   ];
 
   return (
@@ -446,7 +450,7 @@ export default function Home({ onOpenBooking }) {
                 </p>
                 <button
                   onClick={() => onOpenBooking()}
-                  className="px-7 py-3.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-lg"
+                  className="px-7 py-3.5 bg-[#E5A83B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-lg"
                 >
                   Book Directly With Us
                 </button>
@@ -609,8 +613,11 @@ export default function Home({ onOpenBooking }) {
 
                 {/* Google Play Store Badge */}
                 <div className="px-5 py-3 rounded-2xl bg-black/60 border border-white/20 flex items-center gap-3 backdrop-blur-md shadow-xl opacity-90 hover:opacity-100 transition-opacity">
-                  <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
-                    <path d="M3 20.5v-17c0-.55.33-1.02.84-1.24L14 12 3.84 21.74c-.51-.22-.84-.69-.84-1.24zm12.41-7.09l2.76-1.59c.65-.38.65-1.01 0-1.39l-2.76-1.59L12.59 12l2.82 1.41zM4.77 2.45l9.23 9.23-2.82 2.82L2.6 5.92c-.22-.22-.22-.58 0-.8l2.17-2.67zm0 19.1l2.17-2.67c.22-.22.22-.58 0-.8L2.6 18.08c-.22-.22-.22-.58 0-.8l9.58-9.58 2.82 2.82-9.23 9.23z" />
+                  <svg className="w-6 h-6 shrink-0" viewBox="0 0 512 512">
+                    <path fill="#4285F4" d="M47.6 11.4C41.2 18.4 37 29.5 37 43.7v424.6c0 14.2 4.2 25.3 10.6 32.3L48.2 512L287.6 272.6v-5.2L48.2 0L47.6 11.4z" />
+                    <path fill="#34A853" d="M367.4 352.4l-79.8-79.8v-5.2l79.8-79.8l1.4.8l94.5 53.7c27 15.3 27 40.4 0 55.8l-94.5 53.7l-1.4.8z" />
+                    <path fill="#FBBC05" d="M368.8 351.6L287.6 270L48.2 509.4c8.8 9.3 23.3 10.4 39.5 1.2l281.1-159z" />
+                    <path fill="#EA4335" d="M368.8 160.4l-281.1-159c-16.2-9.2-30.7-8.1-39.5 1.2L287.6 242l81.2-81.6z" />
                   </svg>
                   <div className="text-left">
                     <span className="text-[9px] uppercase tracking-wider text-neutral-400 block leading-tight font-medium">GET IT ON</span>
@@ -654,7 +661,7 @@ export default function Home({ onOpenBooking }) {
                           <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-[#0c1322]"></span>
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[11px] font-bold text-white leading-tight">NautiGOA Desk</span>
+                          <span className="text-[11px] font-bold text-white leading-tight">NautiGoa Desk</span>
                           <span className="text-[8px] text-emerald-400 font-medium">Online • App Launch</span>
                         </div>
                       </div>
@@ -746,7 +753,7 @@ export default function Home({ onOpenBooking }) {
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => onOpenBooking()}
-              className="w-full sm:w-auto px-10 py-4 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-all shadow-xl cursor-pointer"
+              className="w-full sm:w-auto px-10 py-4 bg-[#E5A83B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-all shadow-xl cursor-pointer"
             >
               Reserve Yacht Now
             </button>

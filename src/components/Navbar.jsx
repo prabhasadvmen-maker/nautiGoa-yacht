@@ -62,8 +62,8 @@ export default function Navbar({ onOpenBooking }) {
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2.5xl font-sans tracking-tight text-white leading-none drop-shadow-md">
-                <span className="font-normal text-white">Nauti</span>
-                <span className="font-bold text-white tracking-normal">GOA</span>
+                <span className="font-bold text-white">Nauti</span>
+                <span className="font-black text-white tracking-normal">Goa</span>
               </span>
               <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-white/80 font-sans uppercase font-medium mt-1 drop-shadow-sm">
                 Luxury Yachts

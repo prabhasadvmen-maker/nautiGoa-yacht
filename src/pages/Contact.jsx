@@ -95,8 +95,8 @@ export default function Contact({ onOpenBooking }) {
               <span className="text-[#9E7A3B] text-xs font-semibold uppercase tracking-[0.25em]">
                 Direct Contacts
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#151515]">
-                REACH NAUTIGOA DESK
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#151515] leading-snug">
+                REACH <span className="px-2.5 py-0.5 bg-[#C8A96B] text-black font-black rounded-lg shadow-sm mx-1 inline-block">NAUTIGOA</span> DESK
               </h2>
               <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed">
                 Our reservations team is available 24/7 to customize your itinerary, arrange food & drinks, and coordinate captain briefings.

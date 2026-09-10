@@ -40,8 +40,8 @@ export const YACHTS_DATA = [
     ]
   },
   {
-    id: "princess-62",
-    name: "Princess 62 Superyacht",
+    id: "ngy750-liberty-yard",
+    name: "NGY750 Liberty Yard",
     tagline: "British Engineering Meets Nautical Luxury",
     location: "Dubai",
     capacity: "20 Guests",
@@ -58,8 +58,8 @@ export const YACHTS_DATA = [
       "/new_iamge/img6.png",
       "/new_iamge/img7.png"
     ],
-    shortDesc: "The Princess 62 is a magnificent motor yacht featuring sleek contours, an oversized swim platform, and opulent indoor dining.",
-    description: "Cruising along coastal waters, the Princess 62 offers an incomparable superyacht lifestyle. With wide teak decks, a shaded alfresco lounge, state-of-the-art sound systems, and a hydraulic swim platform, this vessel delivers absolute comfort for large gatherings, corporate galas, and lavish birthday bashes.",
+    shortDesc: "The NGY750 Liberty Yard is a magnificent motor yacht featuring sleek contours, an oversized swim platform, and opulent indoor dining.",
+    description: "Cruising along coastal waters, the NGY750 Liberty Yard offers an incomparable superyacht lifestyle. With wide teak decks, a shaded alfresco lounge, state-of-the-art sound systems, and a hydraulic swim platform, this vessel delivers absolute comfort for large gatherings, corporate galas, and lavish birthday bashes.",
     amenities: [
       "Professional Uniformed Captain & Stewards",
       "Hydraulic Swimming Platform",
@@ -116,7 +116,7 @@ export const YACHTS_DATA = [
   },
   {
     id: "sunseeker-76",
-    name: "Sunseeker Manhattan 76",
+    name: "Sunseeker 76",
     tagline: "The Benchmark of Royal Luxury Charters",
     location: "Mumbai",
     capacity: "22 Guests",
