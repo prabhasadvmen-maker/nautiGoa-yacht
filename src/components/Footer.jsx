@@ -48,9 +48,12 @@ export default function Footer({ onOpenBooking }) {
               NautiGoa is premier luxury yacht rental brand operating in Goa, Mumbai, and Dubai. Offering bespoke private charters, sunset cruises, pre-wedding drone shoots, and elite party experiences.
             </p>
 
-            <div className="pt-1 flex items-center gap-2 text-xs text-[#C8A96B] font-medium">
-              <ShieldCheck className="w-4 h-4 text-[#C8A96B] shrink-0" />
-              <span>Direct Verified Booking — 100% Authentic Fleet Guarantee</span>
+            <div className="pt-1 flex flex-col gap-1 text-xs text-[#C8A96B] font-medium">
+              <span className="font-serif italic text-sm text-[#C8A96B] font-bold">"BOOK NOW, thank us later"</span>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#C8A96B] shrink-0" />
+                <span>Direct Verified Booking — 100% Authentic Fleet Guarantee</span>
+              </div>
             </div>
 
             <div className="flex items-center space-x-4 pt-2">
@@ -138,7 +141,11 @@ export default function Footer({ onOpenBooking }) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#C8A96B] shrink-0" />
-                <a href="mailto:booking@nautigoayachts.com" className="hover:text-white transition-colors">booking@nautigoayachts.com</a>
+                <a href="mailto:booking@nautigoa.com" className="hover:text-white transition-colors">booking@nautigoa.com</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-[#C8A96B] shrink-0" />
+                <a href="mailto:help@nautigoa.com" className="hover:text-white transition-colors">help@nautigoa.com</a>
               </li>
             </ul>
           </div>

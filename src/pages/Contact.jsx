@@ -106,19 +106,13 @@ export default function Contact({ onOpenBooking }) {
             {/* Contact Cards */}
             <div className="space-y-4">
               
-              <a
-                href="tel:+918818899951"
-                className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Call Reservations</span>
-                  <span className="font-serif text-lg font-bold text-[#151515]">+91 88188 99951</span>
-                </div>
-              </a>
+              {/* Slogan Banner */}
+              <div className="p-4 bg-gradient-to-r from-[#C8A96B]/20 via-[#C8A96B]/10 to-transparent border-l-4 border-[#C8A96B] rounded-r-2xl">
+                <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#9E7A3B] block">Official Motto</span>
+                <p className="font-serif text-lg font-bold text-[#151515] italic">"BOOK NOW, thank us later"</p>
+              </div>
 
+              {/* WhatsApp Direct */}
               <a
                 href="https://wa.me/918818899951"
                 target="_blank"
@@ -134,8 +128,23 @@ export default function Contact({ onOpenBooking }) {
                 </div>
               </a>
 
+              {/* Phone Direct */}
               <a
-                href="mailto:booking@nautigoayachts.com"
+                href="tel:+918818899951"
+                className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Call Reservations</span>
+                  <span className="font-serif text-lg font-bold text-[#151515]">+91 88188 99951</span>
+                </div>
+              </a>
+
+              {/* Official Email */}
+              <a
+                href="mailto:booking@nautigoa.com"
                 className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
               >
                 <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
@@ -143,10 +152,25 @@ export default function Contact({ onOpenBooking }) {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Official Email</span>
-                  <span className="font-serif text-base font-bold text-[#151515]">booking@nautigoayachts.com</span>
+                  <span className="font-serif text-base font-bold text-[#151515]">booking@nautigoa.com</span>
                 </div>
               </a>
 
+              {/* Help & Support Email */}
+              <a
+                href="mailto:help@nautigoa.com"
+                className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Help & Support Email</span>
+                  <span className="font-serif text-base font-bold text-[#151515]">help@nautigoa.com</span>
+                </div>
+              </a>
+
+              {/* Goa Office Base */}
               <div className="p-5 bg-white border border-neutral-200 rounded-2xl flex items-start gap-4 shadow-xs">
                 <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B] shrink-0">
                   <MapPin className="w-5 h-5" />
