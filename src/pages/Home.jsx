@@ -14,7 +14,11 @@ import {
   Play,
   RotateCcw,
   MapPin,
-  UserCheck
+  UserCheck,
+  Smartphone,
+  Download,
+  Bell,
+  Zap
 } from 'lucide-react';
 import { YACHTS_DATA, DESTINATIONS_DATA, EXPERIENCES_DATA, TESTIMONIALS_DATA, REASON_FEATURES } from '../data/yachtsData';
 import HeroSection from '../components/HeroSection';
@@ -510,6 +514,146 @@ export default function Home({ onOpenBooking }) {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* 8.5 NAUTIGOA MOBILE APP - COMING SOON BANNER */}
+      <section className="py-20 bg-gradient-to-br from-[#0c1322] via-[#0f172a] to-[#050914] text-white border-y border-white/10 relative overflow-hidden">
+        
+        {/* Subtle background glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C8A96B]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96B]/15 border border-[#C8A96B]/40 text-[#C8A96B] text-xs font-semibold uppercase tracking-widest">
+                <Smartphone className="w-4 h-4" />
+                <span>NautiGoa iOS & Android App</span>
+              </div>
+
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+                NAUTIGOA MOBILE APP <br className="hidden sm:block" />
+                <span className="font-serif italic font-normal text-[#C8A96B]">COMING SOON</span>
+              </h2>
+
+              <p className="text-neutral-300 text-sm sm:text-base font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                We are building the ultimate luxury yacht charter app for Goa, Mumbai & Dubai. Soon you’ll be able to book VIP yachts in 1-tap, track live boat locations, and receive exclusive sunset deal alerts right from your smartphone.
+              </p>
+
+              {/* App Features Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-left space-y-1.5 backdrop-blur-md">
+                  <Zap className="w-5 h-5 text-[#C8A96B]" />
+                  <h4 className="font-serif text-sm font-bold text-white">1-Tap Booking</h4>
+                  <p className="text-[11px] text-neutral-400 font-light">Instant charter reservation & direct captain chat.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-left space-y-1.5 backdrop-blur-md">
+                  <MapPin className="w-5 h-5 text-[#C8A96B]" />
+                  <h4 className="font-serif text-sm font-bold text-white">Live GPS Tracker</h4>
+                  <p className="text-[11px] text-neutral-400 font-light">Real-time vessel location & live route map.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-left space-y-1.5 backdrop-blur-md">
+                  <Bell className="w-5 h-5 text-[#C8A96B]" />
+                  <h4 className="font-serif text-sm font-bold text-white">VIP Offers</h4>
+                  <p className="text-[11px] text-neutral-400 font-light">Exclusive sunset charter deals & promo notifications.</p>
+                </div>
+              </div>
+
+              {/* App Store Buttons Badges */}
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                
+                {/* iOS App Store Badge */}
+                <div className="px-5 py-3 rounded-2xl bg-black/60 border border-white/20 flex items-center gap-3 backdrop-blur-md shadow-xl opacity-90 hover:opacity-100 transition-opacity">
+                  <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.87.96-2.96-.93.04-2.09.62-2.75 1.4-.59.68-1.1 1.79-.96 2.86 1.04.08 2.11-.52 2.75-1.3z" />
+                  </svg>
+                  <div className="text-left">
+                    <span className="text-[9px] uppercase tracking-wider text-neutral-400 block leading-tight font-medium">Download on the</span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif text-sm font-bold text-white leading-tight">App Store</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#C8A96B]/30 text-[#C8A96B] font-mono font-semibold">SOON</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Google Play Store Badge */}
+                <div className="px-5 py-3 rounded-2xl bg-black/60 border border-white/20 flex items-center gap-3 backdrop-blur-md shadow-xl opacity-90 hover:opacity-100 transition-opacity">
+                  <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
+                    <path d="M3 20.5v-17c0-.55.33-1.02.84-1.24L14 12 3.84 21.74c-.51-.22-.84-.69-.84-1.24zm12.41-7.09l2.76-1.59c.65-.38.65-1.01 0-1.39l-2.76-1.59L12.59 12l2.82 1.41zM4.77 2.45l9.23 9.23-2.82 2.82L2.6 5.92c-.22-.22-.22-.58 0-.8l2.17-2.67zm0 19.1l2.17-2.67c.22-.22.22-.58 0-.8L2.6 18.08c-.22-.22-.22-.58 0-.8l9.58-9.58 2.82 2.82-9.23 9.23z" />
+                  </svg>
+                  <div className="text-left">
+                    <span className="text-[9px] uppercase tracking-wider text-neutral-400 block leading-tight font-medium">GET IT ON</span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif text-sm font-bold text-white leading-tight">Google Play</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#C8A96B]/30 text-[#C8A96B] font-mono font-semibold">SOON</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Right Mockup Mobile Graphic Column */}
+            <div className="lg:col-span-5 flex justify-center relative">
+              
+              {/* Outer Glowing Phone Shell */}
+              <div className="relative w-64 sm:w-72 aspect-[9/18] rounded-[44px] bg-gradient-to-b from-[#1e293b] via-[#0f172a] to-black p-3.5 border-4 border-white/20 shadow-2xl overflow-hidden -rotate-2 hover:rotate-0 transition-transform duration-500">
+                
+                {/* Phone Screen Mockup Container */}
+                <div className="w-full h-full rounded-[34px] bg-[#0c1322] overflow-hidden flex flex-col justify-between border border-white/10 relative">
+                  
+                  {/* Top Notch & Bar */}
+                  <div className="pt-3 px-5 flex items-center justify-between z-10">
+                    <span className="text-[9px] font-mono font-bold text-white">9:41</span>
+                    <div className="w-12 h-3 bg-black rounded-full mx-auto"></div>
+                    <span className="text-[9px] text-neutral-400 font-semibold">5G</span>
+                  </div>
+
+                  {/* App Screen Content Preview */}
+                  <div className="px-4 py-3 space-y-3 z-10">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-6 h-6 rounded-full bg-[#C8A96B] flex items-center justify-center text-black font-bold text-[9px]">N</div>
+                        <span className="text-xs font-bold text-white">NautiGOA</span>
+                      </div>
+                      <span className="text-[8px] px-2 py-0.5 rounded-full bg-[#C8A96B]/20 text-[#C8A96B] font-mono font-bold uppercase">Coming Soon</span>
+                    </div>
+
+                    <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 space-y-1">
+                      <span className="text-[8px] uppercase tracking-widest text-[#C8A96B] font-bold block">Exclusive App Feature</span>
+                      <h5 className="text-[11px] font-serif font-bold text-white">Azimut 55 VIP Charter</h5>
+                      <span className="text-[9px] text-neutral-300 block">Instant slot reservation in Goa & Dubai</span>
+                    </div>
+
+                    <div className="aspect-[16/9] rounded-xl overflow-hidden relative border border-white/10">
+                      <img src="/images/hero_yacht.png" alt="App Preview Yacht" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-2 flex items-end">
+                        <span className="text-[9px] text-white font-semibold">Mandovi River Sunset • Goa</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* App Launching Banner Bottom */}
+                  <div className="p-4 bg-gradient-to-r from-[#C8A96B] to-[#D8B97B] text-black text-center space-y-0.5 z-10">
+                    <span className="text-[9px] font-bold uppercase tracking-wider block">Official App Launch</span>
+                    <span className="text-xs font-serif font-bold block">Coming Soon on App Store</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
       </section>
 
       {/* 9. FINAL CTA BANNER - Dark Ocean Banner matching reference image */}

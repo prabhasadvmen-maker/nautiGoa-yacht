@@ -35,13 +35,13 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
 
   const handleWhatsAppSubmit = (e) => {
     if (e) e.preventDefault();
-    const yachtObj = YACHTS_DATA.find(y => y.id === formData.yachtId) || YACHTS_DATA[0];
+    const yachtNameStr = selectedYacht ? selectedYacht.name : 'Flexible / Fleet Recommendation';
     
     const textMessage = `*NAUTIGOA LUXURY YACHT CHARTER BOOKING*%0A%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
       `*Email:* ${formData.email || 'N/A'}%0A` +
-      `*Selected Yacht:* ${yachtObj.name}%0A` +
+      `*Yacht Choice:* ${yachtNameStr}%0A` +
       `*Location:* ${formData.location}%0A` +
       `*Charter Date:* ${formData.date || 'To be decided'}%0A` +
       `*Guests:* ${formData.guests}%0A` +
@@ -169,24 +169,6 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
-                    Select Yacht *
-                  </label>
-                  <select
-                    name="yachtId"
-                    value={formData.yachtId}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
-                  >
-                    {YACHTS_DATA.map(y => (
-                      <option key={y.id} value={y.id}>
-                        {y.name} ({y.location}) - {y.startingPrice}/hr
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Charter Date
                   </label>
                   <input
@@ -196,6 +178,23 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                     onChange={handleChange}
                     className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
+                    Number of Guests
+                  </label>
+                  <select
+                    name="guests"
+                    value={formData.guests}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
+                  >
+                    <option value="Couple (2 Guests)">Couple (2 Guests)</option>
+                    <option value="Small Group (3-6 Guests)">Small Group (3-6 Guests)</option>
+                    <option value="Medium Party (7-12 Guests)">Medium Party (7-12 Guests)</option>
+                    <option value="Large Event (13-25 Guests)">Large Event (13-25 Guests)</option>
+                  </select>
                 </div>
               </div>
 

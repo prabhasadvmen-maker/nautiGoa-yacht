@@ -50,14 +50,12 @@ export default function Contact({ onOpenBooking }) {
 
   const handleFormSubmit = (e) => {
     if (e) e.preventDefault();
-    const yachtObj = YACHTS_DATA.find(y => y.id === formData.yachtId) || YACHTS_DATA[0];
     
     const msg = `*NAUTIGOA LUXURY YACHT CHARTER BOOKING*%0A%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
       `*Email:* ${formData.email || 'N/A'}%0A` +
       `*Location:* ${formData.location}%0A` +
-      `*Yacht:* ${yachtObj.name}%0A` +
       `*Charter Date:* ${formData.date || 'TBD'}%0A` +
       `*Guests:* ${formData.guests}%0A` +
       `*Occasion:* ${formData.occasion}%0A` +
@@ -286,24 +284,6 @@ export default function Contact({ onOpenBooking }) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
-                        Preferred Yacht
-                      </label>
-                      <select
-                        name="yachtId"
-                        value={formData.yachtId}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
-                      >
-                        {YACHTS_DATA.map(y => (
-                          <option key={y.id} value={y.id}>
-                            {y.name} ({y.location})
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Charter Date
                       </label>
                       <input
@@ -314,9 +294,7 @@ export default function Contact({ onOpenBooking }) {
                         className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Guests Count
@@ -333,24 +311,24 @@ export default function Contact({ onOpenBooking }) {
                         <option value="13-25 Guests">13-25 Guests</option>
                       </select>
                     </div>
+                  </div>
 
-                    <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
-                        Occasion
-                      </label>
-                      <select
-                        name="occasion"
-                        value={formData.occasion}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
-                      >
-                        <option value="Sunset Cruise">Sunset Cruise</option>
-                        <option value="Proposal / Romantic Date">Proposal / Romantic Date</option>
-                        <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
-                        <option value="Birthday Party">Birthday Party</option>
-                        <option value="Corporate Hosting">Corporate Hosting</option>
-                      </select>
-                    </div>
+                  <div>
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
+                      Occasion / Event Type
+                    </label>
+                    <select
+                      name="occasion"
+                      value={formData.occasion}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
+                    >
+                      <option value="Sunset Cruise">Sunset Cruise</option>
+                      <option value="Proposal / Romantic Date">Proposal / Romantic Date</option>
+                      <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
+                      <option value="Birthday Party">Birthday Party</option>
+                      <option value="Corporate Hosting">Corporate Hosting</option>
+                    </select>
                   </div>
 
                   <div>

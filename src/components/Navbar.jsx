@@ -91,13 +91,13 @@ export default function Navbar({ onOpenBooking }) {
           </nav>
 
           {/* Desktop Right CTA Button - Matching Gold Capsule Button with Arrow ↗ */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4 shrink-0">
             <a
               href="tel:+918818899951"
-              className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-white hover:text-[#C8A96B] transition-colors px-2 py-1 font-semibold drop-shadow-md"
+              className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-white hover:text-[#C8A96B] transition-colors px-2 py-1 font-semibold drop-shadow-md whitespace-nowrap shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C8A96B]" />
-              <span>+91 88188 99951</span>
+              <Phone className="w-3.5 h-3.5 text-[#C8A96B] shrink-0" />
+              <span className="whitespace-nowrap">+91 88188 99951</span>
             </a>
 
             <button

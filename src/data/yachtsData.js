@@ -3,7 +3,7 @@ export const YACHTS_DATA = [
     id: "azimut-55",
     name: "Azimut 55 Flybridge",
     tagline: "Ultimate Italian Elegance & Luxury Cruising",
-    location: "Goa",
+    location: "Dubai",
     capacity: "15 Guests",
     length: "55 ft",
     speed: "28 Knots",
