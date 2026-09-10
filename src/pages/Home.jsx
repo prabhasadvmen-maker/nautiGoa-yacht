@@ -12,7 +12,9 @@ import {
   Gem,
   Users,
   Play,
-  RotateCcw
+  RotateCcw,
+  MapPin,
+  UserCheck
 } from 'lucide-react';
 import { YACHTS_DATA, DESTINATIONS_DATA, EXPERIENCES_DATA, TESTIMONIALS_DATA, REASON_FEATURES } from '../data/yachtsData';
 import HeroSection from '../components/HeroSection';
@@ -53,87 +55,95 @@ export default function Home({ onOpenBooking }) {
       {/* 1. HERO SECTION */}
       <HeroSection onOpenBooking={onOpenBooking} />
 
-      {/* 2. IT'S A LIFESTYLE SECTION */}
-      <section className="bg-white text-neutral-900 rounded-t-3xl sm:rounded-t-[40px] px-5 sm:px-8 lg:px-12 py-16 sm:py-24 relative z-20 -mt-6 sm:-mt-8 shadow-2xl border-b border-neutral-200">
-        <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
+      {/* 2. MORE THAN A BOAT RIDE SECTION */}
+      <section className="bg-white text-neutral-900 px-5 sm:px-8 lg:px-12 py-10 sm:py-14 relative z-20 border-b border-neutral-200 overflow-hidden">
+
+        {/* High quality Captain Hat Image placed at top-left marked location */}
+        <div className="absolute -top-2 left-2 sm:top-1 sm:left-8 md:left-14 lg:left-20 z-20 pointer-events-none">
+          <img 
+            src="/images/captain_hat.png" 
+            alt="NautiGoa Captain Hat" 
+            className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain drop-shadow-xl -rotate-12 transition-transform duration-300 hover:rotate-0"
+          />
+        </div>
+
+        <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8 text-center relative z-10">
           
-          {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#C8A96B] font-bold">
-              MORE THAN A JOURNEY
+          {/* Header Block */}
+          <div className="text-center space-y-1 max-w-3xl mx-auto pt-2 sm:pt-0">
+            <span className="text-xs sm:text-sm font-serif italic text-[#C8A96B] tracking-wider block font-medium">
+              About NautiGoa
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
-              It's a Lifestyle
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515] tracking-tight leading-tight">
+              More Than a <span className="font-serif italic font-normal text-[#151515]">Boat Ride</span>
             </h2>
-            <p className="text-neutral-600 text-xs sm:text-sm md:text-base leading-relaxed font-light pt-2">
-              NautiGoa offers premium yacht rentals for those who seek extraordinary experiences on the water. Celebrate, relax and create unforgettable memories with us.
+          </div>
+
+          {/* Description Paragraphs (Centered, zero text overlap) */}
+          <div className="max-w-3xl mx-auto space-y-4 text-xs sm:text-sm md:text-base text-neutral-600 font-light leading-relaxed">
+            <p>
+              NautiGoa offers a unique way to experience the beauty of Goa, Mumbai and Dubai's surrounding coastline. We combine the thrill of a high-performance luxury yacht with the comfort of a private, premium experience.
+            </p>
+            <p>
+              Whether you're chasing a daytime adventure, a scenic island-hopping journey or an unforgettable sunset cruise, our professional skipper guides you through the region's most stunning locations.
             </p>
           </div>
 
-          {/* 3 Icon Feature Grid */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-8 border-y border-neutral-200 py-8 text-center">
+          {/* 4 Feature Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-4">
             
-            <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
-                <Waves className="w-6 h-6" />
+            {/* Card 1 */}
+            <div className="bg-white border border-neutral-200/90 rounded-[24px] p-6 shadow-xs hover:shadow-md transition-all text-left space-y-3">
+              <div className="w-11 h-11 rounded-xl bg-[#0c1322] text-white flex items-center justify-center shrink-0">
+                <Waves className="w-5 h-5" />
               </div>
-              <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
-                Premium Yachts
-              </h4>
+              <h3 className="font-serif text-base font-bold text-[#151515]">
+                Luxury Meets Adventure
+              </h3>
+              <p className="text-xs text-neutral-500 font-light leading-relaxed">
+                The thrill of a fast, sleek speedboat without sacrificing comfort or style.
+              </p>
             </div>
 
-            <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
-                <Gem className="w-6 h-6" />
+            {/* Card 2 */}
+            <div className="bg-white border border-neutral-200/90 rounded-[24px] p-6 shadow-xs hover:shadow-md transition-all text-left space-y-3">
+              <div className="w-11 h-11 rounded-xl bg-[#0c1322] text-white flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5" />
               </div>
-              <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
-                Unforgettable Experiences
-              </h4>
+              <h3 className="font-serif text-base font-bold text-[#151515]">
+                Hidden Destinations
+              </h3>
+              <p className="text-xs text-neutral-500 font-light leading-relaxed">
+                Secluded beaches, crystal-clear bays and beautiful island scenery.
+              </p>
             </div>
 
-            <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
-                <Users className="w-6 h-6" />
+            {/* Card 3 */}
+            <div className="bg-white border border-neutral-200/90 rounded-[24px] p-6 shadow-xs hover:shadow-md transition-all text-left space-y-3">
+              <div className="w-11 h-11 rounded-xl bg-[#0c1322] text-white flex items-center justify-center shrink-0">
+                <Users className="w-5 h-5" />
               </div>
-              <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
-                Professional Crew
-              </h4>
+              <h3 className="font-serif text-base font-bold text-[#151515]">
+                Small Group Feel
+              </h3>
+              <p className="text-xs text-neutral-500 font-light leading-relaxed">
+                Space for up to 10-25 guests — every trip feels personal and exclusive.
+              </p>
             </div>
 
-          </div>
+            {/* Card 4 */}
+            <div className="bg-white border border-neutral-200/90 rounded-[24px] p-6 shadow-xs hover:shadow-md transition-all text-left space-y-3">
+              <div className="w-11 h-11 rounded-xl bg-[#0c1322] text-white flex items-center justify-center shrink-0">
+                <UserCheck className="w-5 h-5" />
+              </div>
+              <h3 className="font-serif text-base font-bold text-[#151515]">
+                Professional Skipper
+              </h3>
+              <p className="text-xs text-neutral-500 font-light leading-relaxed">
+                Relax and enjoy while an experienced skipper handles the rest.
+              </p>
+            </div>
 
-          {/* Video / Story Card - Inline Click to Play without Popup Modal */}
-          <div
-            className="relative aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-neutral-200 shadow-2xl group cursor-pointer bg-neutral-900"
-            onClick={!isPlayingInline ? handlePlayInline : undefined}
-          >
-            <video
-              ref={inlineVideoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/Hero_section1.png"
-              className="w-full h-full object-cover"
-            >
-              <source src="/Video.mp4" type="video/mp4" />
-            </video>
-
-            {/* Initial Overlay - Hidden once user clicks to play inline */}
-            {!isPlayingInline && (
-              <>
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
-
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-[#C8A96B] text-black border border-white/40 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
-                    <Play className="w-7 h-7 fill-current translate-x-0.5" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-serif font-bold text-white tracking-widest uppercase drop-shadow-md bg-black/50 px-4 py-1.5 rounded-full border border-white/20">
-                    Watch Our Story
-                  </span>
-                </div>
-              </>
-            )}
           </div>
 
         </div>

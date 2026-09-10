@@ -40,8 +40,8 @@ export default function Navbar({ onOpenBooking }) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/20 backdrop-blur-md py-3 text-white'
+        isScrolled || location.pathname !== '/'
+          ? 'bg-[#0c1322]/90 backdrop-blur-xl py-3.5 shadow-2xl border-b border-white/10 text-white'
           : 'bg-transparent py-4 sm:py-6 text-white'
       }`}
     >
@@ -58,11 +58,11 @@ export default function Navbar({ onOpenBooking }) {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-sans tracking-tight text-white leading-none drop-shadow-md">
-                <span className="font-light text-white">Nauti</span>
-                <span className="font-black text-[#C8A96B]">GOA</span>
+              <span className="text-xl sm:text-2.5xl font-sans tracking-tight text-white leading-none drop-shadow-md">
+                <span className="font-normal text-white">Nauti</span>
+                <span className="font-bold text-white tracking-normal">GOA</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-white/90 font-sans uppercase font-bold mt-1 drop-shadow-sm">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-white/80 font-sans uppercase font-medium mt-1 drop-shadow-sm">
                 Luxury Yachts
               </span>
             </div>
