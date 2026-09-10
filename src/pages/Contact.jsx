@@ -68,21 +68,21 @@ export default function Contact({ onOpenBooking }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-neutral-100 pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#151515] pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header Hero */}
         <div className="text-center max-w-3xl mx-auto space-y-4 pt-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black border border-[#C8A96B]/40 text-[#C8A96B] text-xs font-semibold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C8A96B]/40 text-[#9E7A3B] text-xs font-semibold uppercase tracking-widest shadow-xs">
             <MessageCircle className="w-3.5 h-3.5" />
             <span>24/7 Charter Desk</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#151515] uppercase tracking-wide leading-tight">
             LET'S PLAN YOUR PERFECT YACHT EXPERIENCE
           </h1>
 
-          <p className="text-neutral-300 text-sm sm:text-base font-light">
+          <p className="text-neutral-600 text-sm sm:text-base font-light">
             Fill out the form below or chat directly on WhatsApp to check live boat availability in Goa, Mumbai, and Dubai.
           </p>
         </div>
@@ -94,13 +94,13 @@ export default function Contact({ onOpenBooking }) {
           <div className="lg:col-span-5 space-y-8">
             
             <div className="space-y-4">
-              <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
+              <span className="text-[#9E7A3B] text-xs font-semibold uppercase tracking-[0.25em]">
                 Direct Contacts
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#151515]">
                 REACH NAUTIGOA DESK
               </h2>
-              <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed">
+              <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed">
                 Our reservations team is available 24/7 to customize your itinerary, arrange food & drinks, and coordinate captain briefings.
               </p>
             </div>
@@ -110,14 +110,14 @@ export default function Contact({ onOpenBooking }) {
               
               <a
                 href="tel:+918818899951"
-                className="p-5 bg-[#121212] border border-white/10 hover:border-[#C8A96B]/60 rounded-xs flex items-center gap-4 transition-all block"
+                className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
               >
-                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
+                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Call Reservations</span>
-                  <span className="font-serif text-lg font-bold text-white">+91 88188 99951</span>
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Call Reservations</span>
+                  <span className="font-serif text-lg font-bold text-[#151515]">+91 88188 99951</span>
                 </div>
               </a>
 
@@ -125,37 +125,37 @@ export default function Contact({ onOpenBooking }) {
                 href="https://wa.me/918818899951"
                 target="_blank"
                 rel="noreferrer"
-                className="p-5 bg-[#121212] border border-white/10 hover:border-[#25D366]/60 rounded-xs flex items-center gap-4 transition-all block"
+                className="p-5 bg-white border border-neutral-200 hover:border-[#25D366] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
               >
-                <div className="w-12 h-12 rounded-full bg-[#25D366]/20 border border-[#25D366]/50 flex items-center justify-center text-[#25D366]">
+                <div className="w-12 h-12 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center text-[#25D366]">
                   <MessageCircle className="w-5 h-5 fill-current" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">WhatsApp Direct</span>
-                  <span className="font-serif text-lg font-bold text-white">+91 88188 99951</span>
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">WhatsApp Direct</span>
+                  <span className="font-serif text-lg font-bold text-[#151515]">+91 88188 99951</span>
                 </div>
               </a>
 
               <a
                 href="mailto:booking@nautigoayachts.com"
-                className="p-5 bg-[#121212] border border-white/10 hover:border-[#C8A96B]/60 rounded-xs flex items-center gap-4 transition-all block"
+                className="p-5 bg-white border border-neutral-200 hover:border-[#151515] rounded-2xl flex items-center gap-4 transition-all block shadow-xs"
               >
-                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
+                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B]">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Official Email</span>
-                  <span className="font-serif text-base font-bold text-white">booking@nautigoayachts.com</span>
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Official Email</span>
+                  <span className="font-serif text-base font-bold text-[#151515]">booking@nautigoayachts.com</span>
                 </div>
               </a>
 
-              <div className="p-5 bg-[#121212] border border-white/10 rounded-xs flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B] shrink-0">
+              <div className="p-5 bg-white border border-neutral-200 rounded-2xl flex items-start gap-4 shadow-xs">
+                <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-neutral-200 flex items-center justify-center text-[#9E7A3B] shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Goa Office Base</span>
-                  <p className="text-xs text-white font-medium leading-relaxed mt-1">
+                  <span className="text-[10px] uppercase text-neutral-500 font-semibold tracking-wider block">Goa Office Base</span>
+                  <p className="text-xs text-[#151515] font-medium leading-relaxed mt-1">
                     NautiGoa Yacht Service, 548, Next to Britona Church, Panjim, Goa - 403001, India
                   </p>
                 </div>
@@ -164,25 +164,25 @@ export default function Contact({ onOpenBooking }) {
             </div>
 
             {/* Social Channels */}
-            <div className="pt-4 border-t border-white/10 space-y-3">
-              <span className="text-xs uppercase text-neutral-400 tracking-wider block font-semibold">Follow Official Channels</span>
+            <div className="pt-4 border-t border-neutral-200 space-y-3">
+              <span className="text-xs uppercase text-neutral-600 tracking-wider block font-semibold">Follow Official Channels</span>
               <div className="flex items-center space-x-4">
                 <a
                   href="https://www.instagram.com/nautigoa"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 bg-neutral-900 border border-white/15 hover:border-[#C8A96B] text-white text-xs rounded-xs flex items-center gap-2"
+                  className="px-4 py-2 bg-white border border-neutral-300 hover:border-[#151515] text-[#151515] text-xs rounded-full flex items-center gap-2 transition-colors shadow-xs"
                 >
-                  <InstagramIcon className="w-4 h-4 text-[#C8A96B]" />
+                  <InstagramIcon className="w-4 h-4 text-[#9E7A3B]" />
                   <span>Instagram (@nautigoa)</span>
                 </a>
                 <a
                   href="https://www.facebook.com/NautiGoaYachts/"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 bg-neutral-900 border border-white/15 hover:border-[#C8A96B] text-white text-xs rounded-xs flex items-center gap-2"
+                  className="px-4 py-2 bg-white border border-neutral-300 hover:border-[#151515] text-[#151515] text-xs rounded-full flex items-center gap-2 transition-colors shadow-xs"
                 >
-                  <FacebookIcon className="w-4 h-4 text-[#C8A96B]" />
+                  <FacebookIcon className="w-4 h-4 text-[#9E7A3B]" />
                   <span>Facebook</span>
                 </a>
               </div>
@@ -192,26 +192,26 @@ export default function Contact({ onOpenBooking }) {
 
           {/* Booking Form Column */}
           <div className="lg:col-span-7">
-            <div className="glass-panel border border-[#C8A96B]/40 rounded-sm p-8 space-y-6 shadow-2xl">
+            <div className="bg-white border border-neutral-200 rounded-3xl p-8 space-y-6 shadow-xl">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-white uppercase">
+                <h3 className="font-serif text-2xl font-bold text-[#151515] uppercase">
                   BOOKING REQUEST FORM
                 </h3>
-                <p className="text-xs text-[#C8A96B] uppercase tracking-wider font-medium mt-1">
+                <p className="text-xs text-[#9E7A3B] uppercase tracking-wider font-semibold mt-1">
                   Complete your details for instant slot check
                 </p>
               </div>
 
               {submitted ? (
-                <div className="py-12 text-center space-y-4 bg-black/60 p-8 rounded-xs border border-white/10">
-                  <CheckCircle2 className="w-14 h-14 text-[#C8A96B] mx-auto animate-bounce" />
-                  <h4 className="font-serif text-2xl font-bold text-white">Request Received!</h4>
-                  <p className="text-sm text-neutral-300 max-w-md mx-auto">
+                <div className="py-12 text-center space-y-4 bg-[#FAF9F6] p-8 rounded-2xl border border-neutral-200">
+                  <CheckCircle2 className="w-14 h-14 text-[#9E7A3B] mx-auto animate-bounce" />
+                  <h4 className="font-serif text-2xl font-bold text-[#151515]">Request Received!</h4>
+                  <p className="text-sm text-neutral-600 max-w-md mx-auto">
                     We have received your yacht charter request. Our reservation officer will contact you immediately.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-widest rounded-xs"
+                    className="mt-4 px-6 py-2.5 bg-[#151515] text-white font-bold text-xs uppercase tracking-widest rounded-full"
                   >
                     Send Another Request
                   </button>
@@ -221,7 +221,7 @@ export default function Contact({ onOpenBooking }) {
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Full Name *
                       </label>
                       <input
@@ -231,12 +231,12 @@ export default function Contact({ onOpenBooking }) {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your full name"
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -246,14 +246,14 @@ export default function Contact({ onOpenBooking }) {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 88188 99951"
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Email Address
                       </label>
                       <input
@@ -262,19 +262,19 @@ export default function Contact({ onOpenBooking }) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="email@example.com"
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Preferred Location *
                       </label>
                       <select
                         name="location"
                         value={formData.location}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       >
                         <option value="Goa">Goa (Panjim Base)</option>
                         <option value="Mumbai">Mumbai (Gateway)</option>
@@ -285,14 +285,14 @@ export default function Contact({ onOpenBooking }) {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Preferred Yacht
                       </label>
                       <select
                         name="yachtId"
                         value={formData.yachtId}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       >
                         {YACHTS_DATA.map(y => (
                           <option key={y.id} value={y.id}>
@@ -303,7 +303,7 @@ export default function Contact({ onOpenBooking }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Charter Date
                       </label>
                       <input
@@ -311,21 +311,21 @@ export default function Contact({ onOpenBooking }) {
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Guests Count
                       </label>
                       <select
                         name="guests"
                         value={formData.guests}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       >
                         <option value="Couple (2 Guests)">Couple (2 Guests)</option>
                         <option value="3-6 Guests">3-6 Guests</option>
@@ -335,14 +335,14 @@ export default function Contact({ onOpenBooking }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Occasion
                       </label>
                       <select
                         name="occasion"
                         value={formData.occasion}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                       >
                         <option value="Sunset Cruise">Sunset Cruise</option>
                         <option value="Proposal / Romantic Date">Proposal / Romantic Date</option>
@@ -354,7 +354,7 @@ export default function Contact({ onOpenBooking }) {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                       Message / Special Requests
                     </label>
                     <textarea
@@ -363,14 +363,14 @@ export default function Contact({ onOpenBooking }) {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your celebration, food/drink choices, decor requirements..."
-                      className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                     />
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="w-full py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-xs transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xl"
+                      className="w-full py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-full transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xl"
                     >
                       <MessageCircle className="w-4 h-4 fill-current" />
                       <span>Book Now via WhatsApp (+91 88188 99951)</span>
@@ -387,15 +387,15 @@ export default function Contact({ onOpenBooking }) {
         {/* Interactive Google Map Section */}
         <div className="space-y-4 pt-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-serif text-2xl font-bold text-white uppercase">GOA BASE LOCATION</h3>
-            <span className="text-xs text-[#C8A96B] uppercase font-semibold">Panjim, Next to Britona Church</span>
+            <h3 className="font-serif text-2xl font-bold text-[#151515] uppercase">GOA BASE LOCATION</h3>
+            <span className="text-xs text-[#9E7A3B] uppercase font-semibold">Panjim, Next to Britona Church</span>
           </div>
 
-          <div className="w-full h-96 sm:h-[450px] rounded-sm overflow-hidden border border-[#C8A96B]/40 shadow-2xl relative bg-[#121212]">
+          <div className="w-full h-96 sm:h-[450px] rounded-3xl overflow-hidden border border-neutral-200 shadow-xl relative bg-neutral-100">
             <iframe
               title="NautiGoa Yacht Base Location Map"
               src="https://maps.google.com/maps?q=Britona%20Church%20Panjim%20Goa&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              className="w-full h-full border-0 filter grayscale contrast-125 invert-[0.9] opacity-90 hover:opacity-100 transition-opacity duration-300"
+              className="w-full h-full border-0"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

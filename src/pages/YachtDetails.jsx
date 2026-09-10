@@ -62,13 +62,13 @@ export default function YachtDetails({ onOpenBooking }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-neutral-100 pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#151515] pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Back Link */}
         <Link
           to="/yachts"
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C8A96B] font-bold hover:underline"
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#9E7A3B] font-bold hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to All Yachts</span>
@@ -78,14 +78,14 @@ export default function YachtDetails({ onOpenBooking }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Main Large Image */}
-          <div className="lg:col-span-9 relative aspect-[16/10] sm:aspect-[16/9] rounded-sm overflow-hidden bg-black border border-white/10 shadow-2xl">
+          <div className="lg:col-span-9 relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200 shadow-xl">
             <img
               src={activeImage}
               alt={yacht.name}
               className="w-full h-full object-cover transition-all duration-500"
             />
-            <div className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md border border-[#C8A96B]/50 text-[#C8A96B] text-xs font-semibold uppercase tracking-widest rounded-xs flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-[#C8A96B]" />
+            <div className="absolute top-4 left-4 px-3.5 py-1.5 bg-white/90 backdrop-blur-md border border-neutral-200 text-[#151515] text-xs font-semibold uppercase tracking-widest rounded-full flex items-center gap-1.5 shadow-sm">
+              <MapPin className="w-3.5 h-3.5 text-[#9E7A3B]" />
               <span>{yacht.location} Location</span>
             </div>
           </div>
@@ -96,10 +96,10 @@ export default function YachtDetails({ onOpenBooking }) {
               <button
                 key={idx}
                 onClick={() => setActiveImage(img)}
-                className={`relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] w-28 lg:w-full rounded-sm overflow-hidden border transition-all shrink-0 cursor-pointer ${
+                className={`relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] w-28 lg:w-full rounded-xl overflow-hidden border transition-all shrink-0 cursor-pointer ${
                   activeImage === img
-                    ? 'border-[#C8A96B] ring-2 ring-[#C8A96B]/30'
-                    : 'border-white/15 opacity-60 hover:opacity-100'
+                    ? 'border-[#151515] ring-2 ring-black/10'
+                    : 'border-neutral-200 opacity-60 hover:opacity-100'
                 }`}
               >
                 <img src={img} alt={`Gallery view ${idx}`} className="w-full h-full object-cover" />
@@ -116,76 +116,76 @@ export default function YachtDetails({ onOpenBooking }) {
           <div className="lg:col-span-7 space-y-10">
             
             {/* Title Header */}
-            <div className="space-y-3 pb-6 border-b border-white/10">
+            <div className="space-y-3 pb-6 border-b border-neutral-200">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#C8A96B]">
+                <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#9E7A3B]">
                   {yacht.location} Fleet
                 </span>
-                <span className="text-neutral-500">•</span>
-                <span className="text-xs uppercase text-neutral-400 font-mono">
+                <span className="text-neutral-300">•</span>
+                <span className="text-xs uppercase text-neutral-500 font-mono">
                   {yacht.length}
                 </span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white uppercase">
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#151515] uppercase">
                 {yacht.name}
               </h1>
 
-              <p className="text-neutral-300 text-sm italic">
+              <p className="text-neutral-600 text-sm italic">
                 "{yacht.tagline}"
               </p>
 
               {/* Price Banner */}
               <div className="pt-4 flex items-baseline gap-2">
-                <span className="text-xs uppercase text-neutral-400">Starting From</span>
-                <span className="font-serif text-3xl font-bold text-[#C8A96B]">{yacht.startingPrice}</span>
-                <span className="text-xs text-neutral-400">{yacht.priceUnit}</span>
+                <span className="text-xs uppercase text-neutral-500 font-medium">Starting From</span>
+                <span className="font-serif text-3xl font-bold text-[#9E7A3B]">{yacht.startingPrice}</span>
+                <span className="text-xs text-neutral-500">{yacht.priceUnit}</span>
               </div>
             </div>
 
             {/* Quick Specs Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="p-4 bg-[#121212] border border-white/10 rounded-xs text-center space-y-1">
-                <Users className="w-5 h-5 text-[#C8A96B] mx-auto" />
-                <span className="text-[10px] uppercase text-neutral-400 block">Capacity</span>
-                <span className="font-serif text-sm font-bold text-white">{yacht.capacity}</span>
+              <div className="p-4 bg-white border border-neutral-200 rounded-2xl text-center space-y-1 shadow-xs">
+                <Users className="w-5 h-5 text-[#9E7A3B] mx-auto" />
+                <span className="text-[10px] uppercase text-neutral-500 font-semibold block">Capacity</span>
+                <span className="font-serif text-sm font-bold text-[#151515]">{yacht.capacity}</span>
               </div>
 
-              <div className="p-4 bg-[#121212] border border-white/10 rounded-xs text-center space-y-1">
-                <Compass className="w-5 h-5 text-[#C8A96B] mx-auto" />
-                <span className="text-[10px] uppercase text-neutral-400 block">Speed</span>
-                <span className="font-serif text-sm font-bold text-white">{yacht.speed}</span>
+              <div className="p-4 bg-white border border-neutral-200 rounded-2xl text-center space-y-1 shadow-xs">
+                <Compass className="w-5 h-5 text-[#9E7A3B] mx-auto" />
+                <span className="text-[10px] uppercase text-neutral-500 font-semibold block">Speed</span>
+                <span className="font-serif text-sm font-bold text-[#151515]">{yacht.speed}</span>
               </div>
 
-              <div className="p-4 bg-[#121212] border border-white/10 rounded-xs text-center space-y-1">
-                <Sparkles className="w-5 h-5 text-[#C8A96B] mx-auto" />
-                <span className="text-[10px] uppercase text-neutral-400 block">Cabins</span>
-                <span className="font-serif text-sm font-bold text-white">{yacht.cabins}</span>
+              <div className="p-4 bg-white border border-neutral-200 rounded-2xl text-center space-y-1 shadow-xs">
+                <Sparkles className="w-5 h-5 text-[#9E7A3B] mx-auto" />
+                <span className="text-[10px] uppercase text-neutral-500 font-semibold block">Cabins</span>
+                <span className="font-serif text-sm font-bold text-[#151515]">{yacht.cabins}</span>
               </div>
 
-              <div className="p-4 bg-[#121212] border border-white/10 rounded-xs text-center space-y-1">
-                <Clock className="w-5 h-5 text-[#C8A96B] mx-auto" />
-                <span className="text-[10px] uppercase text-neutral-400 block">Min Hours</span>
-                <span className="font-serif text-sm font-bold text-white">2 Hours</span>
+              <div className="p-4 bg-white border border-neutral-200 rounded-2xl text-center space-y-1 shadow-xs">
+                <Clock className="w-5 h-5 text-[#9E7A3B] mx-auto" />
+                <span className="text-[10px] uppercase text-neutral-500 font-semibold block">Min Hours</span>
+                <span className="font-serif text-sm font-bold text-[#151515]">2 Hours</span>
               </div>
             </div>
 
             {/* Description */}
             <div className="space-y-4">
-              <h3 className="font-serif text-2xl font-bold text-white">ABOUT THIS YACHT</h3>
-              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-light">
+              <h3 className="font-serif text-2xl font-bold text-[#151515]">ABOUT THIS YACHT</h3>
+              <p className="text-neutral-700 text-sm sm:text-base leading-relaxed font-light">
                 {yacht.description}
               </p>
             </div>
 
             {/* Amenities Section */}
             <div className="space-y-4">
-              <h3 className="font-serif text-2xl font-bold text-white">AMENITIES & FEATURES</h3>
+              <h3 className="font-serif text-2xl font-bold text-[#151515]">AMENITIES & FEATURES</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {yacht.amenities.map((amenity, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3 bg-[#121212] border border-white/5 rounded-xs">
-                    <CheckCircle2 className="w-4 h-4 text-[#C8A96B] shrink-0" />
-                    <span className="text-xs text-neutral-200">{amenity}</span>
+                  <div key={idx} className="flex items-center gap-3 p-3.5 bg-white border border-neutral-200 rounded-xl shadow-xs">
+                    <CheckCircle2 className="w-4 h-4 text-[#9E7A3B] shrink-0" />
+                    <span className="text-xs text-neutral-800 font-medium">{amenity}</span>
                   </div>
                 ))}
               </div>
@@ -193,11 +193,11 @@ export default function YachtDetails({ onOpenBooking }) {
 
             {/* Experience Includes */}
             <div className="space-y-4">
-              <h3 className="font-serif text-2xl font-bold text-white">EXPERIENCE INCLUDES</h3>
+              <h3 className="font-serif text-2xl font-bold text-[#151515]">EXPERIENCE INCLUDES</h3>
               <ul className="space-y-2.5">
                 {yacht.includes.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-xs text-neutral-300">
-                    <span className="w-2 h-2 rounded-full bg-[#C8A96B]"></span>
+                  <li key={idx} className="flex items-center gap-3 text-xs text-neutral-700">
+                    <span className="w-2 h-2 rounded-full bg-[#9E7A3B]"></span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -208,26 +208,26 @@ export default function YachtDetails({ onOpenBooking }) {
 
           {/* Right Column: Booking Enquiry Form Card */}
           <div className="lg:col-span-5">
-            <div className="sticky top-28 glass-panel border border-[#C8A96B]/40 rounded-sm p-6 sm:p-8 space-y-6 shadow-2xl">
+            <div className="sticky top-28 bg-white border border-neutral-200 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-white uppercase">
+                <h3 className="font-serif text-2xl font-bold text-[#151515] uppercase">
                   BOOK THIS YACHT
                 </h3>
-                <p className="text-xs text-[#C8A96B] tracking-wider uppercase font-semibold mt-1">
+                <p className="text-xs text-[#9E7A3B] tracking-wider uppercase font-semibold mt-1">
                   Reserve {yacht.name} directly with NautiGoa
                 </p>
               </div>
 
               {submitted ? (
-                <div className="py-8 text-center space-y-3 bg-black/60 p-6 rounded-xs border border-white/10">
-                  <CheckCircle2 className="w-12 h-12 text-[#C8A96B] mx-auto" />
-                  <h4 className="font-serif text-xl font-bold text-white">Enquiry Submitted!</h4>
-                  <p className="text-xs text-neutral-300">
+                <div className="py-8 text-center space-y-3 bg-[#FAF9F6] p-6 rounded-2xl border border-neutral-200">
+                  <CheckCircle2 className="w-12 h-12 text-[#9E7A3B] mx-auto" />
+                  <h4 className="font-serif text-xl font-bold text-[#151515]">Enquiry Submitted!</h4>
+                  <p className="text-xs text-neutral-600">
                     Our Goa/Mumbai/Dubai charter desk will reply within 15 minutes.
                   </p>
                   <button
                     onClick={handleWhatsAppClick}
-                    className="w-full mt-4 py-3 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-xs"
+                    className="w-full mt-4 py-3 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-full"
                   >
                     Chat Directly on WhatsApp
                   </button>
@@ -235,7 +235,7 @@ export default function YachtDetails({ onOpenBooking }) {
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                       Full Name *
                     </label>
                     <input
@@ -245,12 +245,12 @@ export default function YachtDetails({ onOpenBooking }) {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full px-4 py-2.5 bg-black/70 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                       Phone Number *
                     </label>
                     <input
@@ -260,12 +260,12 @@ export default function YachtDetails({ onOpenBooking }) {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 88188 99951"
-                      className="w-full px-4 py-2.5 bg-black/70 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                       Email Address
                     </label>
                     <input
@@ -274,13 +274,13 @@ export default function YachtDetails({ onOpenBooking }) {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="email@example.com"
-                      className="w-full px-4 py-2.5 bg-black/70 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Charter Date
                       </label>
                       <input
@@ -288,19 +288,19 @@ export default function YachtDetails({ onOpenBooking }) {
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-black/70 border border-white/15 rounded-xs text-white text-xs focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-xs focus:border-[#151515] focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                      <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                         Guests
                       </label>
                       <select
                         name="guests"
                         value={formData.guests}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-black/70 border border-white/15 rounded-xs text-white text-xs focus:border-[#C8A96B] focus:outline-none"
+                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-xs focus:border-[#151515] focus:outline-none"
                       >
                         <option value="2 Guests">2 Guests</option>
                         <option value="3-6 Guests">3-6 Guests</option>
@@ -311,7 +311,7 @@ export default function YachtDetails({ onOpenBooking }) {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                    <label className="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-1">
                       Message / Custom Decor Request
                     </label>
                     <textarea
@@ -320,14 +320,14 @@ export default function YachtDetails({ onOpenBooking }) {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Specify event type, decoration or catering requirements..."
-                      className="w-full px-4 py-2 bg-black/70 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                      className="w-full px-4 py-2 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                     />
                   </div>
 
                   <div className="space-y-3 pt-2">
                     <button
                       type="submit"
-                      className="w-full py-3.5 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-xs hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                      className="w-full py-3.5 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-full hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
                     >
                       <MessageCircle className="w-4 h-4 fill-current" />
                       <span>Book Now via WhatsApp (+91 88188 99951)</span>
@@ -336,8 +336,8 @@ export default function YachtDetails({ onOpenBooking }) {
                 </form>
               )}
 
-              <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-[11px] text-neutral-400">
-                <ShieldCheck className="w-4 h-4 text-[#C8A96B]" />
+              <div className="pt-4 border-t border-neutral-200 flex items-center gap-2 text-[11px] text-neutral-500">
+                <ShieldCheck className="w-4 h-4 text-[#9E7A3B]" />
                 <span>Zero Booking Fees • Direct Panjim Office Confirmation</span>
               </div>
 

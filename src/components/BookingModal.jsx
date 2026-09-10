@@ -54,27 +54,27 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-2xl bg-[#121212] border border-[#C8A96B]/50 rounded-sm shadow-2xl overflow-hidden my-6 max-h-[90vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-md animate-fadeIn">
+      <div className="relative w-full max-w-2xl bg-white border border-neutral-200 rounded-3xl shadow-2xl overflow-hidden my-6 max-h-[90vh] flex flex-col">
         
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-white/10 bg-black/70">
+        <div className="flex items-center justify-between p-6 border-b border-neutral-200 bg-[#FAF9F6]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full overflow-hidden border border-[#C8A96B] shrink-0 bg-black">
+            <div className="w-9 h-9 rounded-full overflow-hidden border border-[#9E7A3B] shrink-0 bg-white shadow-xs">
               <img src="/Logo.jpg" alt="NautiGoa Logo" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h3 className="font-serif text-xl font-bold text-white tracking-wide">
+              <h3 className="font-serif text-xl font-bold text-[#151515] tracking-wide">
                 BOOK YOUR LUXURY YACHT
               </h3>
-              <p className="text-xs text-[#C8A96B] uppercase tracking-wider font-medium">
+              <p className="text-xs text-[#9E7A3B] uppercase tracking-wider font-semibold">
                 NautiGoa Direct Charter Reservation
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-neutral-400 hover:text-white transition-colors"
+            className="p-2 text-neutral-500 hover:text-black transition-colors cursor-pointer"
           >
             <X className="w-6 h-6" />
           </button>
@@ -84,9 +84,9 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
         <div className="p-6 overflow-y-auto space-y-6">
           {isSubmitted ? (
             <div className="py-12 text-center space-y-4">
-              <CheckCircle2 className="w-16 h-16 text-[#C8A96B] mx-auto animate-bounce" />
-              <h4 className="font-serif text-2xl text-white font-bold">Enquiry Received!</h4>
-              <p className="text-sm text-neutral-300 max-w-md mx-auto leading-relaxed">
+              <CheckCircle2 className="w-16 h-16 text-[#9E7A3B] mx-auto animate-bounce" />
+              <h4 className="font-serif text-2xl text-[#151515] font-bold">Enquiry Received!</h4>
+              <p className="text-sm text-neutral-600 max-w-md mx-auto leading-relaxed">
                 Thank you for contacting NautiGoa Yachts. Our charter manager will get in touch with you immediately on WhatsApp (+91 88188 99951) with custom quotes & slot availability.
               </p>
               <button
@@ -94,7 +94,7 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                   setIsSubmitted(false);
                   onClose();
                 }}
-                className="mt-4 px-6 py-2.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-widest rounded-xs"
+                className="mt-4 px-6 py-2.5 bg-[#151515] text-white font-bold text-xs uppercase tracking-widest rounded-full cursor-pointer"
               >
                 Close & Continue Browsing
               </button>
@@ -104,7 +104,7 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Full Name *
                   </label>
                   <input
@@ -114,12 +114,12 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Phone / WhatsApp *
                   </label>
                   <input
@@ -129,14 +129,14 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Email Address
                   </label>
                   <input
@@ -145,19 +145,19 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="yourname@domain.com"
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Preferred Location *
                   </label>
                   <select
                     name="location"
                     value={formData.location}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   >
                     <option value="Goa">Goa (Panjim Base)</option>
                     <option value="Mumbai">Mumbai (Gateway)</option>
@@ -168,14 +168,14 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Select Yacht *
                   </label>
                   <select
                     name="yachtId"
                     value={formData.yachtId}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   >
                     {YACHTS_DATA.map(y => (
                       <option key={y.id} value={y.id}>
@@ -186,7 +186,7 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Charter Date
                   </label>
                   <input
@@ -194,21 +194,21 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Number of Guests
                   </label>
                   <select
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   >
                     <option value="Couple (2 Guests)">Couple (2 Guests)</option>
                     <option value="Small Group (3-6 Guests)">Small Group (3-6 Guests)</option>
@@ -218,14 +218,14 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                     Occasion / Type
                   </label>
                   <select
                     name="occasion"
                     value={formData.occasion}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                   >
                     <option value="Sunset Cruise">Sunset Cruise</option>
                     <option value="Romantic Date / Proposal">Romantic Date / Proposal</option>
@@ -238,7 +238,7 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-medium">
+                <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
                   Special Requests / Custom Decor & Catering
                 </label>
                 <textarea
@@ -247,14 +247,14 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Mention any custom requirements like balloon decor, private chef, champagne..."
-                  className="w-full px-4 py-2 bg-black/60 border border-white/15 rounded-xs text-white text-sm focus:border-[#C8A96B] focus:outline-none"
+                  className="w-full px-4 py-2 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
                 />
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-widest rounded-xs transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                  className="w-full py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
                   <span>Book Now via WhatsApp (+91 88188 99951)</span>

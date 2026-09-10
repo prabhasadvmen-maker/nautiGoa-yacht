@@ -48,13 +48,13 @@ export default function Home({ onOpenBooking }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-neutral-100 selection:bg-[#C8A96B] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#151515] selection:bg-[#C8A96B] selection:text-white overflow-x-hidden">
       
       {/* 1. HERO SECTION */}
       <HeroSection onOpenBooking={onOpenBooking} />
 
       {/* 2. IT'S A LIFESTYLE SECTION */}
-      <section className="bg-white text-neutral-900 rounded-t-3xl sm:rounded-t-[40px] px-5 sm:px-8 lg:px-12 py-16 sm:py-24 relative z-20 -mt-6 sm:-mt-8 shadow-2xl">
+      <section className="bg-white text-neutral-900 rounded-t-3xl sm:rounded-t-[40px] px-5 sm:px-8 lg:px-12 py-16 sm:py-24 relative z-20 -mt-6 sm:-mt-8 shadow-2xl border-b border-neutral-200">
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           
           {/* Section Header */}
@@ -74,7 +74,7 @@ export default function Home({ onOpenBooking }) {
           <div className="grid grid-cols-3 gap-3 sm:gap-8 border-y border-neutral-200 py-8 text-center">
             
             <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#F7F7F5] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B]">
+              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
                 <Waves className="w-6 h-6" />
               </div>
               <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
@@ -83,7 +83,7 @@ export default function Home({ onOpenBooking }) {
             </div>
 
             <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#F7F7F5] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B]">
+              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
                 <Gem className="w-6 h-6" />
               </div>
               <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
@@ -92,7 +92,7 @@ export default function Home({ onOpenBooking }) {
             </div>
 
             <div className="space-y-2 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#F7F7F5] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B]">
+              <div className="w-12 h-12 rounded-full bg-[#FAF9F6] border border-[#C8A96B]/30 flex items-center justify-center text-[#C8A96B] shadow-sm">
                 <Users className="w-6 h-6" />
               </div>
               <h4 className="font-serif text-xs sm:text-sm font-bold text-[#151515]">
@@ -104,7 +104,7 @@ export default function Home({ onOpenBooking }) {
 
           {/* Video / Story Card - Inline Click to Play without Popup Modal */}
           <div
-            className="relative aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-neutral-200 shadow-2xl group cursor-pointer bg-black"
+            className="relative aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-neutral-200 shadow-2xl group cursor-pointer bg-neutral-900"
             onClick={!isPlayingInline ? handlePlayInline : undefined}
           >
             <video
@@ -140,15 +140,15 @@ export default function Home({ onOpenBooking }) {
       </section>
 
       {/* 3. FEATURED YACHTS SECTION */}
-      <section className="py-24 bg-[#090909] border-y border-white/10">
+      <section className="py-24 bg-[#FAF9F6] text-neutral-900 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
-              <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em] block mb-2">
+              <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.25em] block mb-2">
                 Handpicked Vessels
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white">
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
                 FEATURED LUXURY FLEET
               </h2>
             </div>
@@ -176,28 +176,30 @@ export default function Home({ onOpenBooking }) {
       </section>
 
       {/* 4. DESTINATIONS SECTION */}
-      <section className="py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
-            Elite Locations
-          </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white">
-            DESTINATIONS WE SERVE
-          </h2>
-          <p className="text-neutral-400 text-xs sm:text-sm font-light">
-            From golden beach waters in Goa to glittering coastal baylines in Mumbai and Dubai.
-          </p>
-        </div>
+      <section className="py-28 bg-white text-neutral-900 border-b border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.25em]">
+              Elite Locations
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
+              DESTINATIONS WE SERVE
+            </h2>
+            <p className="text-neutral-600 text-xs sm:text-sm font-light">
+              From golden beach waters in Goa to glittering coastal baylines in Mumbai and Dubai.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {DESTINATIONS_DATA.map((dest) => (
-            <DestinationCard key={dest.id} destination={dest} />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {DESTINATIONS_DATA.map((dest) => (
+              <DestinationCard key={dest.id} destination={dest} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 5. LUXURY EXPERIENCES & SERVICES - Bento Grid Matching Reference Design */}
-      <section className="py-24 bg-[#FAF9F6] text-neutral-900 border-t border-neutral-200 shadow-inner">
+      <section className="py-24 bg-[#FAF9F6] text-neutral-900 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
@@ -389,52 +391,54 @@ export default function Home({ onOpenBooking }) {
       </section>
 
       {/* 6. WHY CHOOSE NAUTIGOA */}
-      <section className="py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel border border-[#C8A96B]/30 rounded-sm p-8 sm:p-14 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-            
-            <div className="lg:col-span-1 space-y-4">
-              <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
-                The NautiGoa Standard
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-                WHY BOOK WITH NAUTIGOA?
-              </h2>
-              <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed font-light">
-                We eliminate middleman markups, fake yacht listings, and hidden fees. Direct booking ensures verified vessels and top-tier hospitality.
-              </p>
-              <button
-                onClick={() => onOpenBooking()}
-                className="px-7 py-3.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-lg"
-              >
-                Book Directly With Us
-              </button>
-            </div>
+      <section className="py-28 bg-white text-neutral-900 border-b border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#FAF9F6] border border-neutral-200/90 rounded-3xl p-8 sm:p-14 shadow-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+              
+              <div className="lg:col-span-1 space-y-4">
+                <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.25em]">
+                  The NautiGoa Standard
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#151515]">
+                  WHY BOOK WITH NAUTIGOA?
+                </h2>
+                <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed font-light">
+                  We eliminate middleman markups, fake yacht listings, and hidden fees. Direct booking ensures verified vessels and top-tier hospitality.
+                </p>
+                <button
+                  onClick={() => onOpenBooking()}
+                  className="px-7 py-3.5 bg-[#C8A96B] text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full hover:bg-[#D8B97B] transition-colors cursor-pointer shadow-lg"
+                >
+                  Book Directly With Us
+                </button>
+              </div>
 
-            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {REASON_FEATURES.map((feat, idx) => (
-                <div key={idx} className="p-6 bg-black/70 border border-white/10 rounded-xs space-y-3 hover:border-[#C8A96B]/40 transition-colors">
-                  <div className="w-9 h-9 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
-                    <Sparkles className="w-4 h-4" />
+              <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {REASON_FEATURES.map((feat, idx) => (
+                  <div key={idx} className="p-6 bg-white border border-neutral-200 rounded-2xl space-y-3 hover:border-[#C8A96B]/60 transition-colors shadow-sm">
+                    <div className="w-9 h-9 rounded-full bg-[#C8A96B]/20 border border-[#C8A96B]/50 flex items-center justify-center text-[#C8A96B]">
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <h4 className="font-serif text-base font-bold text-[#151515]">{feat.title}</h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed font-light">{feat.desc}</p>
                   </div>
-                  <h4 className="font-serif text-base font-bold text-white">{feat.title}</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed font-light">{feat.desc}</p>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
+            </div>
           </div>
         </div>
       </section>
 
       {/* 7. CUSTOMER TESTIMONIALS */}
-      <section className="py-24 bg-[#080808]">
+      <section className="py-24 bg-[#FAF9F6] text-neutral-900 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
+            <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.25em]">
               Real Guest Experiences
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white">
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
               CLIENT TESTIMONIALS
             </h2>
           </div>
@@ -443,7 +447,7 @@ export default function Home({ onOpenBooking }) {
             {TESTIMONIALS_DATA.map((test) => (
               <div
                 key={test.id}
-                className="p-8 bg-[#121212] border border-white/10 rounded-sm space-y-4 relative flex flex-col justify-between hover:border-[#C8A96B]/40 transition-colors"
+                className="p-8 bg-white border border-neutral-200/90 rounded-2xl space-y-4 relative flex flex-col justify-between hover:border-[#C8A96B]/60 transition-colors shadow-md"
               >
                 <div className="space-y-3">
                   <div className="flex items-center gap-1 text-[#C8A96B]">
@@ -451,16 +455,16 @@ export default function Home({ onOpenBooking }) {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-neutral-300 text-xs sm:text-sm italic leading-relaxed font-light">
+                  <p className="text-neutral-700 text-xs sm:text-sm italic leading-relaxed font-light">
                     "{test.comment}"
                   </p>
                 </div>
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                <div className="pt-4 border-t border-neutral-200 flex items-center justify-between">
                   <div>
-                    <h4 className="font-serif text-sm font-bold text-white">{test.name}</h4>
-                    <span className="text-[10px] text-neutral-400 uppercase tracking-wider">{test.location}</span>
+                    <h4 className="font-serif text-sm font-bold text-[#151515]">{test.name}</h4>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider">{test.location}</span>
                   </div>
-                  <span className="text-[10px] px-2.5 py-1 bg-black border border-[#C8A96B]/30 text-[#C8A96B] rounded font-mono">
+                  <span className="text-[10px] px-2.5 py-1 bg-neutral-100 border border-[#C8A96B]/40 text-[#C8A96B] rounded-full font-mono font-semibold">
                     {test.yacht}
                   </span>
                 </div>
@@ -471,25 +475,25 @@ export default function Home({ onOpenBooking }) {
       </section>
 
       {/* 8. GALLERY GRID */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="py-24 bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-2">
-          <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.25em]">
+          <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.25em]">
             Visual Moments
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white">
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#151515]">
             NAUTIGOA GALLERY
           </h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {galleryImages.map((img, idx) => (
-            <div key={idx} className="group relative aspect-square overflow-hidden rounded-xs bg-black border border-white/10">
+            <div key={idx} className="group relative aspect-square overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-200/80 shadow-md">
               <img
                 src={img.url}
                 alt={img.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
                 <span className="text-[11px] text-[#C8A96B] uppercase font-bold tracking-widest">{img.loc}</span>
                 <h4 className="text-sm font-serif text-white font-bold">{img.title}</h4>
               </div>
@@ -498,10 +502,10 @@ export default function Home({ onOpenBooking }) {
         </div>
       </section>
 
-      {/* 9. FINAL CTA BANNER */}
-      <section className="py-28 bg-gradient-to-b from-[#0a0a0a] to-black border-t border-white/10 relative overflow-hidden">
+      {/* 9. FINAL CTA BANNER - Dark Ocean Banner matching reference image */}
+      <section className="py-28 bg-[#121212] text-white border-t border-neutral-800 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10">
-          <span className="text-[#C8A96B] text-xs font-semibold uppercase tracking-[0.3em]">
+          <span className="text-[#C8A96B] text-xs font-bold uppercase tracking-[0.3em]">
             Book Your Charter Today
           </span>
           <h2 className="font-serif text-4xl sm:text-6xl font-bold text-white uppercase tracking-tight">
