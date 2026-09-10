@@ -100,7 +100,7 @@ export default function About({ onOpenBooking }) {
 
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200 shadow-xl">
             <img
-              src="/images/hero_yacht.png"
+              src="/new_iamge/Img1.png"
               alt="NautiGoa Yacht Experience"
               className="w-full h-full object-cover"
             />

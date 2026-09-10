@@ -45,12 +45,20 @@ export default function Home({ onOpenBooking }) {
   const featuredYachts = YACHTS_DATA.slice(0, 4);
 
   const galleryImages = [
-    { url: "/Hero_section1.png", title: "Luxury Azimut Flybridge", loc: "Goa" },
-    { url: "/images/catamaran.png", title: "Lagoon Dual-Hull Catamaran", loc: "Mandovi River" },
-    { url: "/images/romantic_decor.png", title: "Romantic Candlelight Dinner", loc: "Panjim Sunset" },
-    { url: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=800&auto=format&fit=crop", title: "Princess 62 Superyacht", loc: "Dubai Marina" },
-    { url: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=800&auto=format&fit=crop", title: "Sunseeker 76 Flybridge Deck", loc: "Mumbai Gateway" },
-    { url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop", title: "Sunset Celebration Deck", loc: "Goa Waters" }
+    { url: "/new_iamge/Img1.png", title: "Luxury Azimut Flybridge", loc: "Dubai Marina" },
+    { url: "/new_iamge/img2.png", title: "Golden Sunset Cruise", loc: "Panjim Coast" },
+    { url: "/new_iamge/img3.png", title: "Sea Ray Sundancer Speedboat", loc: "Mandovi River" },
+    { url: "/new_iamge/img4.png", title: "VIP Cockpit Deck Lounge", loc: "Goa Waters" },
+    { url: "/new_iamge/img5.png", title: "Princess 62 Superyacht", loc: "Dubai Marina" },
+    { url: "/new_iamge/img6.png", title: "Teak Deck Sunbathing Lounge", loc: "Mumbai Gateway" },
+    { url: "/new_iamge/img7.png", title: "Royal Horizon Cruise", loc: "Mumbai Coast" },
+    { url: "/new_iamge/img8.png", title: "Lagoon Dual-Hull Catamaran", loc: "Mandovi Bay" },
+    { url: "/new_iamge/img9.png", title: "Trampoline Bow Net Lounge", loc: "Goa Waters" },
+    { url: "/new_iamge/img10.png", title: "Yacht Party & DJ Celebration", loc: "Goa Coast" },
+    { url: "/new_iamge/img11.png", title: "Sunseeker 76 Flybridge Deck", loc: "Dubai Waters" },
+    { url: "/new_iamge/img12.jpeg", title: "Pre-Wedding Drone Photography", loc: "Goa Island" },
+    { url: "/new_iamge/img13.jpeg", title: "Romantic Dinner & Sunset Setup", loc: "Panjim Sunset" },
+    { url: "/new_iamge/img14.jpeg", title: "Ferretti Sovereign Ocean Cruise", loc: "Dubai Horizon" }
   ];
 
   return (
@@ -238,7 +246,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-4 md:row-span-2 group relative aspect-[4/5] md:aspect-auto min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/Img1.png"
                 alt="Speedboat & Island Tours"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -267,7 +275,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-4 group relative aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/img2.png"
                 alt="Golden Hour Sunset Cruise"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -290,7 +298,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-4 md:row-span-2 group relative aspect-[4/5] md:aspect-auto min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/img12.jpeg"
                 alt="Pre-Wedding & Drone Shoots"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -319,7 +327,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-4 group relative aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/img13.jpeg"
                 alt="Romantic Couples & Proposals"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -342,7 +350,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-3 group relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/img4.png"
                 alt="Private Island Expeditions"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -362,7 +370,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-3 group relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="/Hero_section1.png"
+                src="/new_iamge/img6.png"
                 alt="Luxury Azimut Cruising"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
@@ -382,7 +390,7 @@ export default function Home({ onOpenBooking }) {
               className="md:col-span-6 group relative aspect-[16/9] md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 shadow-xl border border-neutral-200/80 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1000&auto=format&fit=crop"
+                src="/new_iamge/img10.png"
                 alt="Yacht Parties & Celebrations"
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />

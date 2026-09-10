@@ -12,12 +12,12 @@ export const YACHTS_DATA = [
     startingPrice: "₹25,000",
     priceUnit: "per hour",
     featured: true,
-    image: "/images/hero_yacht.png",
+    image: "/new_iamge/Img1.png",
     gallery: [
-      "/images/hero_yacht.png",
-      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/Img1.png",
+      "/new_iamge/img2.png",
+      "/new_iamge/img3.png",
+      "/new_iamge/img4.png"
     ],
     shortDesc: "Experience unparalleled luxury with the Azimut 55. Features an expansive flybridge lounge, air-conditioned saloon, and high-end audio system perfect for Goa sunsets.",
     description: "The Azimut 55 Flybridge represents the pinnacle of Italian marine craftsmanship. Designed for elite charter experiences in Goa, this luxury motor yacht boasts a grand main salon with floor-to-ceiling panoramic views, three plush air-conditioned staterooms, an outdoor sunbathing bow lounge, and a top-deck flybridge equipped with wet bar and plush seating. Ideal for private celebrations, VIP hosting, and romantic sunset cruises down Mandovi River and Mandovi bay.",
@@ -52,11 +52,11 @@ export const YACHTS_DATA = [
     startingPrice: "₹42,000",
     priceUnit: "per hour",
     featured: true,
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1200&auto=format&fit=crop",
+    image: "/new_iamge/img5.png",
     gallery: [
-      "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/img5.png",
+      "/new_iamge/img6.png",
+      "/new_iamge/img7.png"
     ],
     shortDesc: "The Princess 62 is a magnificent motor yacht featuring sleek contours, an oversized swim platform, and opulent indoor dining.",
     description: "Cruising along coastal waters, the Princess 62 offers an incomparable superyacht lifestyle. With wide teak decks, a shaded alfresco lounge, state-of-the-art sound systems, and a hydraulic swim platform, this vessel delivers absolute comfort for large gatherings, corporate galas, and lavish birthday bashes.",
@@ -90,11 +90,11 @@ export const YACHTS_DATA = [
     startingPrice: "₹18,000",
     priceUnit: "per hour",
     featured: true,
-    image: "/images/catamaran.png",
+    image: "/new_iamge/img8.png",
     gallery: [
-      "/images/catamaran.png",
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/img8.png",
+      "/new_iamge/img9.png",
+      "/new_iamge/img10.png"
     ],
     shortDesc: "Perfect for party cruises and family get-togethers in Goa. Twin-hull design ensures minimal sway and maximum trampoline lounging space.",
     description: "The Lagoon 450 Catamaran is Goa's favorite luxury vessel for social gatherings, corporate celebrations, and pre-wedding drone photoshoots. Designed with two massive net trampolines at the bow for sunbathing, a shaded rear cockpit dining space, and 360-degree glass salon, it offers ultra-smooth cruising on Panjim waters.",
@@ -127,10 +127,11 @@ export const YACHTS_DATA = [
     startingPrice: "₹55,000",
     priceUnit: "per hour",
     featured: true,
-    image: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
+    image: "/new_iamge/img11.png",
     gallery: [
-      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/img11.png",
+      "/new_iamge/img12.jpeg",
+      "/new_iamge/img13.jpeg"
     ],
     shortDesc: "Mumbai's premiere luxury superyacht. Offers a grand multi-level deck experience with views of Gateway of India and Arabian Sea.",
     description: "Sail from Gateway of India, Mumbai aboard the magnificent Sunseeker 76. Designed to impress, this flagship yacht combines dramatic exterior lines with sophisticated modern interiors. Enjoy panoramic views of the ocean skyline, fine dining on water, and unmatched privacy for high-profile clients and royal celebrations.",
@@ -161,9 +162,11 @@ export const YACHTS_DATA = [
     startingPrice: "₹48,000",
     priceUnit: "per hour",
     featured: false,
-    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop",
+    image: "/new_iamge/img14.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/img14.jpeg",
+      "/new_iamge/Img1.png",
+      "/new_iamge/img2.png"
     ],
     shortDesc: "Uncompromising luxury yachting in ocean waters. Offers plush leather lounge interiors and panoramic flybridge deck views.",
     description: "The Ferretti 70 stands out in our superyacht lineup. Designed for high-speed luxury cruises along pristine coastal bays, it blends plush Italian leather seating with cutting-edge marine technology.",
@@ -192,10 +195,11 @@ export const YACHTS_DATA = [
     startingPrice: "₹12,000",
     priceUnit: "per hour",
     featured: false,
-    image: "/images/romantic_decor.png",
+    image: "/new_iamge/img3.png",
     gallery: [
-      "/images/romantic_decor.png",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop"
+      "/new_iamge/img3.png",
+      "/new_iamge/img4.png",
+      "/new_iamge/img6.png"
     ],
     shortDesc: "Intimate, high-speed luxury boat ideal for couples, romantic candlelight setup, proposals, and fast island tours in Goa.",
     description: "The Sea Ray 320 Sundancer is the ultimate choice for couples and small intimate groups in Panjim, Goa. Known for its stylish bow seating area with headrests, compact luxury cabin, and high cruising speed, it is NautiGoa's top-rated vessel for surprise marriage proposals, anniversary candlelight dinners, and sunset champagne cruises.",
@@ -221,7 +225,7 @@ export const DESTINATIONS_DATA = [
     name: "Goa",
     tagline: "Golden Sunsets, Mandovi River & Emerald Coastline",
     charterCount: "25+ Vessels Available",
-    image: "/images/hero_yacht.png",
+    image: "/new_iamge/Img1.png",
     description: "Discover Goa from a brand-new perspective. From peaceful Mandovi river cruises past historic Panjim churches to offshore island stopovers, Goa offers the ultimate tropical yacht getaway.",
     popularRoutes: ["Panjim & Britona Church", "Mandovi River Sunset", "Chapora River", "Grand Island Offshore"]
   },
@@ -230,7 +234,7 @@ export const DESTINATIONS_DATA = [
     name: "Mumbai",
     tagline: "Gateway of India Coastal Waters & Marine Drive Starlight",
     charterCount: "15+ Superyachts Available",
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1200&auto=format&fit=crop",
+    image: "/new_iamge/img7.png",
     description: "Board from the iconic Gateway of India and cruise past Mumbai's glittering skyline, Bandra-Worli Sea Link from water, and serene coastal bays.",
     popularRoutes: ["Gateway of India", "Marine Drive Starlight", "Alibaug Weekend Gateway", "Bandra Coastal View"]
   },
@@ -239,7 +243,7 @@ export const DESTINATIONS_DATA = [
     name: "Dubai",
     tagline: "Dubai Marina Waters, Burj Al Arab Sunset & Palm Jumeirah",
     charterCount: "30+ Mega Yachts Available",
-    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop",
+    image: "/new_iamge/img11.png",
     description: "Sail amidst world-famous maritime destinations. Enjoy superyacht charters around Dubai Marina lagoon, Ain Dubai, Burj Al Arab waters, and Atlantis Palm.",
     popularRoutes: ["Dubai Marina Lagoon", "Burj Al Arab Sunset", "Palm Jumeirah Circle", "Dubai Canal Cruise"]
   }
@@ -251,28 +255,28 @@ export const EXPERIENCES_DATA = [
     title: "Golden Hour Sunset Cruise",
     subtitle: "Magical Goa, Mumbai & Dubai Sunsets",
     description: "Sip chilled beverages while watching the golden sun drop into the ocean horizon. Features romantic deck lighting and ocean music.",
-    image: "/images/hero_yacht.png"
+    image: "/new_iamge/img2.png"
   },
   {
     id: "romantic-candlelight",
     title: "Romantic Couples & Proposals",
     subtitle: "Bespoke Floral Decor & Champagne",
     description: "Transform your special date, anniversary, or marriage proposal into an unforgettable dream with custom floral setups on private boat decks.",
-    image: "/images/romantic_decor.png"
+    image: "/new_iamge/img13.jpeg"
   },
   {
     id: "drone-prewedding",
     title: "Pre-Wedding & Drone Photography",
     subtitle: "Cinematic Ocean Memories",
     description: "Capture breathtaking 4K aerial drone photography and love stories against the deep blue sea on our catamaran sun trampolines.",
-    image: "/images/catamaran.png"
+    image: "/new_iamge/img12.jpeg"
   },
   {
     id: "party-celebration",
     title: "Yacht Parties & Birthdays",
     subtitle: "Onboard DJ, Bar & Gourmet Catering",
     description: "Host high-energy celebrations with onboard sound systems, private chefs, custom balloon decor, and dedicated steward staff.",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop"
+    image: "/new_iamge/img10.png"
   }
 ];
 

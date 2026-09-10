@@ -10,6 +10,13 @@
     --color-offwhite: #151515;
   }
 
+  html {
+    scroll-behavior: smooth !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   html,
   body {
     background-color: #FAF9F6;
