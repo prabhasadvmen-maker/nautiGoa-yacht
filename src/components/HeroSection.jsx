@@ -18,9 +18,12 @@ export default function HeroSection({ onOpenBooking }) {
           loop
           muted
           playsInline
+          preload="metadata"
+          src="/Herosection video.mp4"
           poster="/Hero_section1.png"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center gpu-accelerate"
         >
+          <source src="/Herosection video.mp4" type="video/mp4" />
           <source src="/Herosection%20video.mp4" type="video/mp4" />
           <img
             src="/Hero_section1.png"

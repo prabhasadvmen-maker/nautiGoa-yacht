@@ -9,6 +9,8 @@ export default function DestinationCard({ destination }) {
         src={destination.image}
         alt={destination.name}
         className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-85 group-hover:opacity-95"
+        loading="lazy"
+        decoding="async"
       />
 
       {/* Dark Gradient Overlay */}

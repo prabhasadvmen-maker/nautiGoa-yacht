@@ -83,6 +83,8 @@ export default function YachtDetails({ onOpenBooking }) {
               src={activeImage}
               alt={yacht.name}
               className="w-full h-full object-cover transition-all duration-500"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute top-4 left-4 px-3.5 py-1.5 bg-white/90 backdrop-blur-md border border-neutral-200 text-[#151515] text-xs font-semibold uppercase tracking-widest rounded-full flex items-center gap-1.5 shadow-sm">
               <MapPin className="w-3.5 h-3.5 text-[#9E7A3B]" />
@@ -102,7 +104,7 @@ export default function YachtDetails({ onOpenBooking }) {
                     : 'border-neutral-200 opacity-60 hover:opacity-100'
                 }`}
               >
-                <img src={img} alt={`Gallery view ${idx}`} className="w-full h-full object-cover" />
+                <img src={img} alt={`Gallery view ${idx}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </button>
             ))}
           </div>

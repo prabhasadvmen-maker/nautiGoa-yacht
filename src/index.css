@@ -45,6 +45,17 @@
   textarea {
     font-size: 16px !important;
   }
+
+  /* Hardware Acceleration & Content Visibility for Smooth Performance */
+  img, video {
+    content-visibility: auto;
+  }
+}
+
+.gpu-accelerate {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Custom Luxury Scrollbar */

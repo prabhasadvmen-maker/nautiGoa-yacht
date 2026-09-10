@@ -76,6 +76,8 @@ export default function Home({ onOpenBooking }) {
             src="/images/captain_hat.png" 
             alt="NautiGoa Captain Hat" 
             className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain drop-shadow-xl -rotate-12 transition-transform duration-300 hover:rotate-0"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -248,7 +250,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/Img1.png"
                 alt="Speedboat & Island Tours"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-95 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
                 <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
@@ -277,7 +281,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img2.png"
                 alt="Golden Hour Sunset Cruise"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-5 flex flex-col justify-end text-white">
                 <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-0.5">
@@ -300,7 +306,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img12.jpeg"
                 alt="Pre-Wedding & Drone Shoots"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-95 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
                 <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
@@ -329,7 +337,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img13.jpeg"
                 alt="Romantic Couples & Proposals"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-5 flex flex-col justify-end text-white">
                 <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-0.5">
@@ -352,7 +362,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img4.png"
                 alt="Private Island Expeditions"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end text-white">
                 <span className="text-[9px] uppercase font-bold tracking-[0.2em] text-[#C8A96B]">
@@ -372,7 +384,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img6.png"
                 alt="Luxury Azimut Cruising"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end text-white">
                 <span className="text-[9px] uppercase font-bold tracking-[0.2em] text-[#C8A96B]">
@@ -392,7 +406,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src="/new_iamge/img10.png"
                 alt="Yacht Parties & Celebrations"
-                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
                 <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C8A96B] mb-1">
@@ -513,7 +529,9 @@ export default function Home({ onOpenBooking }) {
               <img
                 src={img.url}
                 alt={img.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 gpu-accelerate"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
                 <span className="text-[11px] text-[#C8A96B] uppercase font-bold tracking-widest">{img.loc}</span>
@@ -623,34 +641,83 @@ export default function Home({ onOpenBooking }) {
                     <span className="text-[9px] text-neutral-400 font-semibold">5G</span>
                   </div>
 
-                  {/* App Screen Content Preview */}
-                  <div className="px-4 py-3 space-y-3 z-10">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-6 h-6 rounded-full bg-[#C8A96B] flex items-center justify-center text-black font-bold text-[9px]">N</div>
-                        <span className="text-xs font-bold text-white">NautiGOA</span>
+                  {/* App Screen Chat Preview */}
+                  <div className="px-3 py-3 flex-1 flex flex-col justify-between z-10 space-y-2 overflow-hidden">
+                    
+                    {/* Chat Header */}
+                    <div className="flex items-center justify-between pb-2 border-b border-white/10">
+                      <div className="flex items-center gap-2">
+                        <div className="relative">
+                          <div className="w-7 h-7 rounded-full bg-[#C8A96B] flex items-center justify-center text-black font-bold text-[10px] shadow-md">
+                            N
+                          </div>
+                          <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-[#0c1322]"></span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-[11px] font-bold text-white leading-tight">NautiGOA Desk</span>
+                          <span className="text-[8px] text-emerald-400 font-medium">Online • App Launch</span>
+                        </div>
                       </div>
-                      <span className="text-[8px] px-2 py-0.5 rounded-full bg-[#C8A96B]/20 text-[#C8A96B] font-mono font-bold uppercase">Coming Soon</span>
+                      <span className="text-[8px] px-2 py-0.5 rounded-full bg-[#C8A96B]/20 text-[#C8A96B] font-mono font-bold uppercase border border-[#C8A96B]/40">
+                        Coming Soon
+                      </span>
                     </div>
 
-                    <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 space-y-1">
-                      <span className="text-[8px] uppercase tracking-widest text-[#C8A96B] font-bold block">Exclusive App Feature</span>
-                      <h5 className="text-[11px] font-serif font-bold text-white">Azimut 55 VIP Charter</h5>
-                      <span className="text-[9px] text-neutral-300 block">Instant slot reservation in Goa & Dubai</span>
+                    {/* Chat Messages Stream */}
+                    <div className="space-y-2.5 my-auto text-[10px] leading-tight">
+                      
+                      {/* Message 1: Guest Inquiry (Right Bubble) */}
+                      <div className="flex flex-col items-end space-y-0.5">
+                        <div className="max-w-[85%] bg-gradient-to-r from-[#C8A96B] to-[#D8B97B] text-black p-2.5 rounded-2xl rounded-tr-xs shadow-md font-medium">
+                          Hi NautiGoa! Is Azimut 55 Yacht available for sunset cruise in Goa? 🚤
+                        </div>
+                        <div className="flex items-center gap-1 text-[7px] text-neutral-400 px-1">
+                          <span>9:41 AM</span>
+                          <span className="text-sky-400 font-bold">✓✓</span>
+                        </div>
+                      </div>
+
+                      {/* Message 2: NautiGoa Reply (Left Bubble - App Soon) */}
+                      <div className="flex flex-col items-start space-y-0.5">
+                        <div className="max-w-[88%] bg-white/10 border border-white/15 backdrop-blur-md text-white p-2.5 rounded-2xl rounded-tl-xs shadow-md space-y-1">
+                          <span className="text-[8px] uppercase tracking-wider text-[#C8A96B] font-bold block">NautiGoa Concierge</span>
+                          <p className="text-neutral-200">
+                            Hello! Yes, slots are open! Our new NautiGoa Mobile App is launching soon for 1-tap instant booking & live GPS tracking! 📱✨
+                          </p>
+                        </div>
+                        <span className="text-[7px] text-neutral-400 px-1">9:41 AM</span>
+                      </div>
+
+                      {/* Message 3: App Pre-Register Offer (Left Bubble) */}
+                      <div className="flex flex-col items-start space-y-0.5">
+                        <div className="max-w-[90%] bg-[#C8A96B]/15 border border-[#C8A96B]/40 backdrop-blur-md text-white p-2.5 rounded-2xl shadow-md space-y-1">
+                          <div className="flex items-center gap-1 text-[#C8A96B]">
+                            <Zap className="w-3 h-3 shrink-0" />
+                            <span className="text-[9px] font-bold uppercase tracking-wider">App Launch Offer</span>
+                          </div>
+                          <p className="text-[9.5px] text-neutral-200">
+                            ⚡ Pre-register today to get <span className="text-[#C8A96B] font-bold">15% OFF</span> on your first app charter booking!
+                          </p>
+                        </div>
+                        <span className="text-[7px] text-neutral-400 px-1">9:42 AM</span>
+                      </div>
+
                     </div>
 
-                    <div className="aspect-[16/9] rounded-xl overflow-hidden relative border border-white/10">
-                      <img src="/images/hero_yacht.png" alt="App Preview Yacht" className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-2 flex items-end">
-                        <span className="text-[9px] text-white font-semibold">Mandovi River Sunset • Goa</span>
+                    {/* Fake Chat Input Bar Bottom */}
+                    <div className="p-2 rounded-xl bg-white/10 border border-white/15 flex items-center justify-between text-neutral-400 text-[9px]">
+                      <span className="truncate pr-2">💬 Type a message or book app...</span>
+                      <div className="w-5 h-5 rounded-full bg-[#C8A96B] text-black flex items-center justify-center font-bold shrink-0">
+                        ➔
                       </div>
                     </div>
+
                   </div>
 
                   {/* App Launching Banner Bottom */}
-                  <div className="p-4 bg-gradient-to-r from-[#C8A96B] to-[#D8B97B] text-black text-center space-y-0.5 z-10">
-                    <span className="text-[9px] font-bold uppercase tracking-wider block">Official App Launch</span>
-                    <span className="text-xs font-serif font-bold block">Coming Soon on App Store</span>
+                  <div className="py-2.5 px-3 bg-gradient-to-r from-[#C8A96B] to-[#D8B97B] text-black text-center space-y-0.5 z-10">
+                    <span className="text-[8px] font-bold uppercase tracking-wider block">Official App Launch</span>
+                    <span className="text-[11px] font-serif font-bold block">Coming Soon on App Store & Play Store</span>
                   </div>
 
                 </div>
