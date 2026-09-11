@@ -18,9 +18,17 @@ const InstagramIcon = (props) => (
   </svg>
 );
 
-const FacebookIcon = (props) => (
+const XIcon = (props) => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" {...props}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+const LinkedinIcon = (props) => (
   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
   </svg>
 );
 import { YACHTS_DATA } from '../data/yachtsData';
@@ -188,7 +196,7 @@ export default function Contact({ onOpenBooking }) {
             {/* Social Channels */}
             <div className="pt-4 border-t border-neutral-200 space-y-3">
               <span className="text-xs uppercase text-neutral-600 tracking-wider block font-semibold">Follow Official Channels</span>
-              <div className="flex items-center space-x-4">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href="https://www.instagram.com/nautigoa"
                   target="_blank"
@@ -199,13 +207,22 @@ export default function Contact({ onOpenBooking }) {
                   <span>Instagram (@nautigoa)</span>
                 </a>
                 <a
-                  href="https://www.facebook.com/NautiGoaYachts/"
+                  href="https://x.com/nautigoayachts"
                   target="_blank"
                   rel="noreferrer"
                   className="px-4 py-2 bg-white border border-neutral-300 hover:border-[#151515] text-[#151515] text-xs rounded-full flex items-center gap-2 transition-colors shadow-xs"
                 >
-                  <FacebookIcon className="w-4 h-4 text-[#9E7A3B]" />
-                  <span>Facebook</span>
+                  <XIcon className="w-4 h-4 text-[#9E7A3B]" />
+                  <span>X (Twitter)</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/nautigoayachts/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2 bg-white border border-neutral-300 hover:border-[#151515] text-[#151515] text-xs rounded-full flex items-center gap-2 transition-colors shadow-xs"
+                >
+                  <LinkedinIcon className="w-4 h-4 text-[#9E7A3B]" />
+                  <span>LinkedIn</span>
                 </a>
               </div>
             </div>
