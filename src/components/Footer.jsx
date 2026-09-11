@@ -187,7 +187,7 @@ export default function Footer({ onOpenBooking }) {
               rel="noreferrer"
               className="hover:text-[#C8A96B] transition-colors"
             >
-              Advmen Technology
+              Advmen Technologies
             </a>
             )
           </p>
