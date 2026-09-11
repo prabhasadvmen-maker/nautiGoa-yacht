@@ -198,42 +198,23 @@ export default function BookingModal({ isOpen, onClose, selectedYacht = null }) 
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
-                    Number of Guests
-                  </label>
-                  <select
-                    name="guests"
-                    value={formData.guests}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
-                  >
-                    <option value="Couple (2 Guests)">Couple (2 Guests)</option>
-                    <option value="Small Group (3-6 Guests)">Small Group (3-6 Guests)</option>
-                    <option value="Medium Party (7-12 Guests)">Medium Party (7-12 Guests)</option>
-                    <option value="Large Event (13-25 Guests)">Large Event (13-25 Guests)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
-                    Occasion / Type
-                  </label>
-                  <select
-                    name="occasion"
-                    value={formData.occasion}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
-                  >
-                    <option value="Sunset Cruise">Sunset Cruise</option>
-                    <option value="Romantic Date / Proposal">Romantic Date / Proposal</option>
-                    <option value="Pre-Wedding Drone Shoot">Pre-Wedding Drone Shoot</option>
-                    <option value="Birthday / Anniversary Party">Birthday / Anniversary Party</option>
-                    <option value="Corporate Event">Corporate Event</option>
-                    <option value="Island Expedition">Island Expedition</option>
-                  </select>
-                </div>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-neutral-600 mb-1 font-semibold">
+                  Occasion / Type
+                </label>
+                <select
+                  name="occasion"
+                  value={formData.occasion}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2.5 bg-[#FAF9F6] border border-neutral-300 rounded-xl text-[#151515] text-sm focus:border-[#151515] focus:outline-none"
+                >
+                  <option value="Sunset Cruise">Sunset Cruise</option>
+                  <option value="Romantic Date / Proposal">Romantic Date / Proposal</option>
+                  <option value="Pre-Wedding Drone Shoot">Pre-Wedding Drone Shoot</option>
+                  <option value="Birthday / Anniversary Party">Birthday / Anniversary Party</option>
+                  <option value="Corporate Event">Corporate Event</option>
+                  <option value="Island Expedition">Island Expedition</option>
+                </select>
               </div>
 
               <div>
