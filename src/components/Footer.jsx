@@ -170,7 +170,27 @@ export default function Footer({ onOpenBooking }) {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
-          <p>© {new Date().getFullYear()} NautiGoa Yachts. All Rights Reserved.</p>
+          <p>
+            © {new Date().getFullYear()} NautiGoa Yachts. All Rights Reserved. |{' '}
+            <a
+              href="https://advmen.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#C8A96B] transition-colors"
+            >
+              advmen.com
+            </a>{' '}
+            (Designed by{' '}
+            <a
+              href="https://advmen.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#C8A96B] transition-colors"
+            >
+              Advmen Technology
+            </a>
+            )
+          </p>
           <div className="flex items-center space-x-6 text-neutral-400 uppercase tracking-widest text-[10px]">
             <span>Goa</span>
             <span>•</span>
